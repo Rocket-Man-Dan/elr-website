@@ -1,0 +1,112 @@
+:root {
+    --color-bg: rgb(24, 24, 24);
+    --color-main-dark: rgb(12, 12, 12);
+    --color-main-dark-alt: rgb(50, 50, 50);
+
+    --color-main-purple: rgb(176, 0, 242);
+    --color-main-white: red;
+    --color-main-orange: rgb(255, 93, 0);
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg);
+}
+
+header {
+    z-index: 20;
+    position: fixed;
+    width: 100vw;
+    height: 6vh;
+}
+
+.home {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    margin: 0vh;
+    /* background-color: red; */
+    height: 100%;
+    width: 50%;
+    padding-left: 25vw;
+}
+
+.home > a,.links > a {
+    margin: .25vh 1vh;
+}
+
+.home > a > img {
+    height: 2.5vh;
+}
+
+.links {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    margin: 0vh;
+    /* background-color: red; */
+    height: 100%;
+    width: 50%;
+    padding-right: 25vw;
+}
+
+.links > a > img {
+    height: 2.5vh;
+}
+
+
+.nav-wrapper {
+    display: flex;
+    position: relative;
+
+    width: 100vw;
+    height: 8vh;
+    bottom: 0;
+    background-image: linear-gradient(to right, var(--color-main-dark), var(--color-main-dark-alt));
+}
+
+.nav-wrapper-border {
+    width: 100vw;
+    height: .5vh;
+    background-image: linear-gradient(to left, var(--color-main-dark), var(--color-main-dark-alt));
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+    width: 100vw;
+    height: 20vh;
+    background-color: aqua;
+    background-image: linear-gradient(to left, var(--color-main-purple), var(--color-main-orange));
+    overflow: hidden;
+    
+}
+
+.hero-img {
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin: 0vh auto;
+    margin-top: -15vh;
+    width: 30vh;
+}
+
+.hero-video {
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 175%;
+    margin-top: -13vh;
+    opacity: 30%;
+    filter: blur(8px);
+}
