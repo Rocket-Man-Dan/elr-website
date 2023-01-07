@@ -8,11 +8,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header id="header">
     <input type="checkbox" id="mobile-nav" style="display: none; position: fixed; z-index: 999;">
     <div class="nav-wrapper">
       <nav class="home nav">
-        <a href=""><img onmouseover="src='./img/logo_ELR_white.svg'" onmouseout="src='./img/logo_ELR_color.svg'" src="./img/logo_ELR_color.svg" alt=""></a>
+        <a href=""><img onmouseover="src='./img/logo_ELR_white.svg'"
+                        onmouseout="src='./img/logo_ELR_color.svg'"
+                        src="./img/logo_ELR_color.svg" alt=""></a>
       </nav>
       <div class="btn-burger-container">
         <label class="btn-burger" for="mobile-nav"></label>
@@ -20,26 +22,48 @@
       <a class="nav-mobile" href=""><img src="./img/icon_mobile_menu_gradient.svg" alt=""></a>
       <nav class="links nav">
         <a class="nav-btn" href=""><img onmouseover="src='./img/icon_twitter_white.svg'"
-        onmouseout="src='./img/icon_twitter_gradient.svg'"
-        src="./img/icon_twitter_gradient.svg" alt="">
+                                        onmouseout="src='./img/icon_twitter_gradient.svg'"
+                                        src="./img/icon_twitter_gradient.svg" alt="twitter">
         </a>
         <a class="nav-btn" href=""><img onmouseover="src='./img/icon_instagram_white.svg'"
-        onmouseout="src='./img/icon_instagram_gradient.svg'"
-        src="./img/icon_instagram_gradient.svg" alt="">
+                                        onmouseout="src='./img/icon_instagram_gradient.svg'"
+                                        src="./img/icon_instagram_gradient.svg" alt="instagram">
         </a>
         <a class="nav-btn" href=""><img onmouseover="src='./img/icon_youtube_white.svg'"
-        onmouseout="src='./img/icon_youtube_gradient.svg'"
-        src="./img/icon_youtube_gradient.svg" alt="">
+                                        onmouseout="src='./img/icon_youtube_gradient.svg'"
+                                        src="./img/icon_youtube_gradient.svg" alt="youtube">
         </a>
-        <a class="nav-btn btn" href="">Merch</a>
+        <a class="nav-btn btn" href=""><span>Merch</span></a>
 
       </nav>
-    </div>
+    </div>/-
     <div class="nav-wrapper-border"></div>
   </header>
   <section class="hero">
+    <div class="btn-wrapper" onclick="scrollToVideos()">
+      <span class="recent-uploads btn">Latest Videos</span>
+    </div>
     <img class="hero-img" src="./img/Asset 9.png" alt="">
     <video playsinline autoplay muted loop class="hero-video" src="./video/eafrdsfasdfgSEGsegh.mp4"></video>
+  </section>
+  <section class="videos" id="videos">
+    <iframe class="iframe video main"
+    src="https://www.youtube.com/embed?listType=playlist&list=UUj_ARBxhCoF5JxUItcEUs7Q">
+  </iframe>
+  <div class="videos-wrapper">
+    <iframe class="iframe video alt"
+    src="https://www.youtube.com/embed?listType=playlist&list=UUj_ARBxhCoF5JxUItcEUs7Q&index=2">
+  </iframe>
+  </iframe>
+    <iframe class="iframe video alt"
+    src="https://www.youtube.com/embed?listType=playlist&list=UUj_ARBxhCoF5JxUItcEUs7Q&index=3">
+  </iframe>
+  </iframe>
+    <iframe class="iframe video alt"
+    src="https://www.youtube.com/embed?listType=playlist&list=UUj_ARBxhCoF5JxUItcEUs7Q&index=4">
+  </iframe>
+  </div>
+
   </section>
 </body>
 <script src="main.js"></script>
