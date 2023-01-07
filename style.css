@@ -200,6 +200,11 @@ body {
 .nav-wrapper.scroll > .links > .text {
   font-size: 1vh;
 }
+.nav-wrapper.scroll > .btn-burger-container > .btn-burger {
+  transition: all ease-in-out 500ms;
+  width: 2vh;
+  height: 2vh;
+}
 
 
 /* header bevel gradient */
