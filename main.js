@@ -17,10 +17,10 @@ window.addEventListener('scroll', function(){
   }
 
   oldScrollPos = curScrollPos
-  console.log("oldScrollPos " + oldScrollPos)
+  // console.log("oldScrollPos " + oldScrollPos)
   curScrollPos = this.scrollY
-  console.log("curScrollPos " + curScrollPos)
-  console.log("window y " + this.scrollY)
+  // console.log("curScrollPos " + curScrollPos)
+  // console.log("window y " + this.scrollY)
 
   if (oldScrollPos < curScrollPos) {
     nav.classList.add("scroll")
