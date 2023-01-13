@@ -518,6 +518,7 @@ embed {
 .giveaways {
     z-index: -1000;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -527,6 +528,7 @@ embed {
     /* border: .25vh solid red; */
 
     /* background-color: black; */
+    overflow: hidden;
 }
 
 .giveaways > h1 {
@@ -548,18 +550,22 @@ embed {
     align-items: center;
     justify-content: center;
     margin: 0vh;
-    width: 65vh;
+    width: 75vh;
+}
+
+.giveaways-grid > a {
+    display: none;
 }
 
 .giveaways-grid {
-    z-index: -100;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     margin-top: -15vh;
-    margin-left: 30vh;
+    margin-left: 70vh;
     margin-bottom: 20vh;
     position: absolute;
     filter: drop-shadow(0vh 0vh 2vh var(--color-main-dark));
@@ -570,12 +576,12 @@ embed {
     z-index: -200;
     width: 50%;
     margin-right: 10vh;
-    margin-left: -90vh;
-    margin-top: 20vh;
+    margin-left: -50vh;
+    margin-top: 45vh;
     position: absolute;
     transform: rotate(-4deg);
     animation-name: spin;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -584,36 +590,88 @@ embed {
     from { -moz-transform: rotate(-4deg); }
     to { -moz-transform: rotate(4deg); }
 }
+
 @-webkit-keyframes spin {
     from { -webkit-transform: rotate(-4deg); }
     to { -webkit-transform: rotate(4deg); }
 }
+
 @keyframes spin {
     from {transform:rotate(-4deg);}
     to {transform:rotate(4deg);}
 }
 
-
-.bg-shape {
+.giveaways-shape {
     z-index: -200;
     display: flex;
     position: absolute;
-    margin: 0;
-    padding: 0;
-    filter: drop-shadow(0vh 0vh 5vh var(--color-main-dark));
-    height: 100vh;
-    width: 100vw;
-    pointer-events: none;
+    width: 100%;
+}
 
-    background-image: url(../elr-website/img/bg_shape_element.svg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    
-    
+.giveaways-shape.s1 {
+    bottom: 0;
+    filter: drop-shadow(0vh -4vh 7vh var(--color-main-dark));
+}
+
+.giveaways-shape.s2 {
+    top: 0;
+    transform: scaleY(-100%);
+    filter: drop-shadow(0vh -3vh 2vh var(--color-main-dark));
+    margin-top: -3vh;
 }
 
 /* ⋯⋯⋯ ☏ Giveaways ☏ ⋯⋯⋯ */
+@media (max-aspect-ratio: 4/3) {
 
+
+    .giveaways {
+        height: 140vh;
+    }
+
+    .giveaways-grid-wrapper{
+        flex-direction: column;
+    }
+
+    .giveaways-grid {
+        margin: 0;
+        margin-top: 5vh;
+    }
+
+    .giveaways-grid:nth-child(1) {
+        margin: 0;
+        margin-top: -40vh;
+    }
+
+    .giveaway-img {
+        margin: 0;
+        width: 50vh;
+    }
+    
+    .giveaways > h1 {
+        z-index: -200;
+        margin-top: -90vh;
+        text-align: center;
+        font-size: 2.5vh;
+    }
+
+    .giveaways-shape.s1 {
+        bottom: 0;
+    }
+    
+    .giveaways-shape.s2 {
+        top: 0;
+        transform: scaleY(-100%);
+        margin-top: 10vh;
+    }
+
+}
+@media (max-aspect-ratio: 9/16) {
+    .giveaways-shape.s2 {
+        top: 0;
+        transform: scaleY(-100%);
+        margin-top: 13vh;
+    }
+}
 /* ∷∷∷∷∷∷∷∷ Footer ∷∷∷∷∷∷∷∷ */
 footer {
     z-index: -100;
