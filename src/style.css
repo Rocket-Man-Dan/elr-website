@@ -58,6 +58,28 @@
 
 }
 
+/* ∷∷∷∷∷∷∷∷ HTML Tags ∷∷∷∷∷∷∷∷ */
+/* ⋯⋯⋯ ☏ HTML Tags ☏ ⋯⋯⋯ */
+body {
+    z-index: -99;
+    position: relative;
+    margin: 0;
+    background: var(--color-bg);
+    overflow-x: hidden;
+    
+}
+
+h1 {
+    margin: 0;
+    color: var(--color-main-white);
+    font-size: 4vh;
+}
+
+p {
+    color: var(--color-main-white);
+    /* text-align: center; */
+}
+
 /* ∷∷∷∷∷∷∷∷ Buttons ∷∷∷∷∷∷∷∷ */
 /* ⋯⋯⋯ Button Default ⋯⋯⋯ */
 .btn {
@@ -900,7 +922,8 @@ embed {
     align-items: center;
     gap: 2vh;
     width: 100vw;
-    /* padding-top: 10vh; */
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     border: none;
     height: fit-content;
     /* overflow: hidden; */
@@ -932,6 +955,7 @@ embed {
 }
 
 /* ⋯⋯⋯ ☏ Store ☏ ⋯⋯⋯ */
+
 
 @media (min-aspect-ratio: 4/3) {
 
@@ -1025,6 +1049,40 @@ embed {
     var(--color-main-orange)
 );
 /* background-color: aliceblue; */
+}
+
+
+.cart-btn {
+    z-index: 999;
+    margin-top: -95vh;
+    margin-left: 148vh;
+    position: fixed;
+}
+
+@media (max-aspect-ratio: 4/3) {
+
+    .store > h1 {
+        z-index: 0;
+        position: absolute;
+        margin: 0vh;
+        margin-left: auto;
+        margin-right: auto;
+        left: 2vh;
+        right: 0;
+        top: 15vh;
+        text-align: center;
+    }
+
+    .cart-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+        position: absolute;
+        margin: 0;
+        top: 18vh;
+        right: 5vh;
+    }
 }
 
 
@@ -1177,12 +1235,6 @@ transform: scale(1.1);
     letter-spacing: .25vh;
 }
 
-.cart-btn {
-    z-index: 999;
-    margin-top: -95vh;
-    margin-left: 148vh;
-    position: fixed;
-}
 
 .cart-btn.cart {
     z-index: 999;
@@ -1254,7 +1306,112 @@ transform: scale(1.1);
 
 
 /* ⋯⋯⋯ ☏ Cart ☏ ⋯⋯⋯ */
+@media (max-aspect-ratio: 4/3) {
 
+    #cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .cart > h1 {
+        position: relative;
+        margin: 0;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+    }
+
+    .cart-info-wrapper {
+        display: flex;
+        margin: 0;
+        position: relative;
+        width: 89%;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        margin-bottom: 10vh;
+    }
+
+    .cart-btn.cart {
+        position: relative;
+    }
+
+    .text-center {
+        position: absolute;
+    }
+
+    .text-center > h2 {
+        position: absolute;
+    }
+
+    .shopping-cart {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        position: relative;
+
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+    }
+
+    .cart-item.cart {
+        width: 90%;
+        margin-top: 7vh;
+    }
+
+    .item-delete {
+        margin: 0;
+        margin-left: 21vh;
+        margin-top: -6.5vh;
+    }
+
+    .details.cart > p {
+        margin-top: 18.5vh;
+        margin-left: 2vh;
+        font-size: 1.75vh;
+    }
+    .cart-item.cart > img {
+        height: 10vh;
+    }
+
+    .title-price-x > h2{
+        font-size: 2vh;
+    }
+    .title-price-x > h3{
+        font-size: 1.75vh;
+    }
+    .title-price-x > p{
+        font-size: 1.25vh;
+    }
+
+    .title-price-x {
+        
+    }
+
+    .item-buttons.cart {
+        width: 50%;
+        margin-left: 12vh;
+    }
+
+    .cart-btn.cart {
+        position: absolute;
+        margin: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: -11vh;
+    }
+
+
+}
 /* ⋯⋯⋯ About Us ⋯⋯⋯ */
 .about {
     display: flex;
@@ -1452,27 +1609,7 @@ footer {
     }
 
 }
-/* ∷∷∷∷∷∷∷∷ HTML Tags ∷∷∷∷∷∷∷∷ */
-/* ⋯⋯⋯ ☏ HTML Tags ☏ ⋯⋯⋯ */
-body {
-    z-index: -99;
-    position: relative;
-    margin: 0;
-    background: var(--color-bg);
-    overflow-x: hidden;
-    
-}
 
-h1 {
-    margin: 0;
-    color: var(--color-main-white);
-    font-size: 4vh;
-}
-
-p {
-    color: var(--color-main-white);
-    /* text-align: center; */
-}
 
 /* ∷∷∷∷∷∷∷∷ JS DOM ∷∷∷∷∷∷∷∷ */
 /* ⋯⋯⋯ Scroll Up Header ⋯⋯⋯ */
