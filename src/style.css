@@ -5,6 +5,8 @@
 /* ⋯⋯⋯ background color ⋯⋯⋯ */
 /* ⋯⋯⋯ Fonts ⋯⋯⋯ */
 /* ⋯⋯⋯ Border ⋯⋯⋯ */
+/* ∷∷∷∷∷∷∷∷ HTML Tags ∷∷∷∷∷∷∷∷ */
+/* ⋯⋯⋯ ☏ HTML Tags ☏ ⋯⋯⋯ */
 /* ∷∷∷∷∷∷∷∷ Buttons ∷∷∷∷∷∷∷∷ */
 /* ⋯⋯⋯ Button Default ⋯⋯⋯ */
 /* ⋯⋯⋯ Header Buttons ⋯⋯⋯ */
@@ -19,8 +21,6 @@
 /* ⋯⋯⋯ Giveaways ⋯⋯⋯ */
 /* ⋯⋯⋯ ☏ Giveaways ☏ ⋯⋯⋯ */
 /* ∷∷∷∷∷∷∷∷ Footer ∷∷∷∷∷∷∷∷ */
-/* ∷∷∷∷∷∷∷∷ HTML Tags ∷∷∷∷∷∷∷∷ */
-/* ⋯⋯⋯ ☏ HTML Tags ☏ ⋯⋯⋯ */
 /* ∷∷∷∷∷∷∷∷ JS DOM ∷∷∷∷∷∷∷∷ */
 /* ⋯⋯⋯ Scroll Up Header ⋯⋯⋯ */
 /* ⋯⋯⋯ Projects Card Hover ⋯⋯⋯ */
@@ -55,7 +55,10 @@
     font-family: "poppins";
     -webkit-tap-highlight-color: transparent;
 /* ⋯⋯⋯ Border ⋯⋯⋯ */
-
+    --border-size-small: 1vh;
+    --border-size-med: 2vh;
+    --border-size-large: 3vh;
+    --border-size-xlarge: 4vh;
 }
 
 /* ∷∷∷∷∷∷∷∷ HTML Tags ∷∷∷∷∷∷∷∷ */
@@ -181,7 +184,6 @@ p {
     transition: all ease-in-out 200ms;
     transform: scale(1.1);
 }
-
 
 .nav-img {
     transition: all ease-in-out 200ms;
