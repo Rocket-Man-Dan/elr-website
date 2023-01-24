@@ -18,52 +18,97 @@
                             src="../src/img/nav_icons/icon_totop.svg" alt="">
   <!-- header -->
   <header id="header" class="header">
-    <input type="checkbox" id="mobile-nav" style="display: none; position: fixed; z-index: 999;">
+    <input
+      type="checkbox"
+      id="mobile-nav"
+      style="display: none; position: fixed; z-index: 999"
+    />
     <div class="nav-wrapper">
       <!-- logo home button -->
-      <nav class="home nav">
-        <a class="nav-btn" href="../"><img class="nav-img" onmouseover="src='../src/img/logos/logo_ELR_white.svg'"
-                        onmouseout="src='../src/img/logos/logo_ELR_color.svg'"
-                        src="../src/img/logos/logo_ELR_color.svg" alt="ELR logo"></a>
-      </nav>
+
       <div class="btn-burger-container">
         <label class="btn-burger" for="mobile-nav"></label>
       </div>
       <a class="nav-mobile" href="">
-        <img src="../src/img/nav_icons/icon_mobile_menu_white.svg" alt="open mobile menu">
+        <img
+          src="../src/img/nav_icons/icon_mobile_menu_white.svg"
+          alt="open mobile menu"
+        />
       </a>
       <!-- nav for links -->
       <nav class="links nav">
-        <a class="nav-btn" href="">
-          <img class="nav-img" src="../src/img/nav_icons/icon_twitter_gradient.svg" alt="twitter">
-          <img class="nav-img alt" src="../src/img/nav_icons/icon_twitter_white.svg">
-          <h3 class="btn-text" style="--font-size: 3vh;">Twitter</h3>
-        </a>
-        <a class="nav-btn" href="https://www.instagram.com/exoticluxuryreviews/">
-          <img class="nav-img" src="../src/img/nav_icons/icon_instagram_gradient.svg" alt="instagram">
-          <img class="nav-img alt" src="../src/img/nav_icons/icon_instagram_white.svg">
-          <h3 class="btn-text" style="--font-size: 3vh;">Instagram</h3>
-        </a>
-        <a class="nav-btn" href="">
-          <img class="nav-img" src="../src/img/nav_icons/icon_youtube_gradient.svg" alt="youtube">
-          <img class="nav-img alt" src="../src/img/nav_icons/icon_youtube_white.svg">
-          <h3 class="btn-text" style="--font-size: 3vh;">Youtube</h3>
-        </a>
+        <div class="mobile-nav-hitbox"></div>
         <a class="nav-btn" href="../store/">
-          <img class="nav-img" src="../src/img/nav_icons/icon_merch.svg" alt="merch">
-          <img class="nav-img alt" src="../src/img/nav_icons/icon_merch_white.svg">
-          <h3 class="btn-text" style="--font-size: 3vh;">Shop</h3>
+          <img
+            class="nav-img"
+            src="../src/img/nav_icons/icon_merch.svg"
+            alt="merch"
+          />
+          <img
+            class="nav-img alt"
+            src="../src/img/nav_icons/icon_merch_white.svg"
+          />
+          <h3 style="--y: 0rem" class="btn-text">Shop</h3>
         </a>
+
         <a class="nav-btn" href="../giveaways/">
-          <img class="nav-img" src="../src/img/nav_icons/icon_giveaways_gradient.svg" alt="merch">
-          <img class="nav-img alt" src="../src/img/nav_icons/icon_giveaways_white.svg">
-          <h3 class="btn-text" style="--font-size: 3vh;">Giveaways</h3>
+          <img
+            class="nav-img"
+            src="../src/img/nav_icons/icon_giveaways_gradient.svg"
+            alt="merch"
+          />
+          <img
+            class="nav-img alt"
+            src="../src/img/nav_icons/icon_giveaways_white.svg"
+          />
+          <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
+        </a>
+        <a class="nav-btn" href="../charity/">
+          <img
+            class="nav-img"
+            src="../src/img/nav_icons/icon_charity_gradient.svg"
+            alt="merch"
+          />
+          <img
+            class="nav-img alt"
+            src="../src/img/nav_icons/icon_charity_white.svg"
+          />
+          <h3 style="--y: 0.5rem" class="btn-text">Charity Partners</h3>
+        </a>
+        <a class="nav-btn" href="../social/">
+          <img
+            class="nav-img"
+            src="../src/img/nav_icons/icon_social_media_gradient.svg"
+            alt="merch"
+          />
+          <img
+            class="nav-img alt"
+            src="../src/img/nav_icons/icon_social_media_white.svg"
+          />
+          <h3 style="--y: 0.75rem" class="btn-text">Social Media</h3>
         </a>
         <a class="nav-btn" href="../contact/">
-          <img class="nav-img" src="../src/img/nav_icons/icon_contact_gradient.svg" alt="merch">
-          <img class="nav-img alt" src="../src/img/nav_icons/icon_contact_white.svg">
-          <h3 class="btn-text" style="--font-size: 3vh;">Contact</h3>
+          <img
+            class="nav-img"
+            src="../src/img/nav_icons/icon_contact_gradient.svg"
+            alt="merch"
+          />
+          <img
+            class="nav-img alt"
+            src="../src/img/nav_icons/icon_contact_white.svg"
+          />
+          <h3 style="--y: 0rem" class="btn-text">Contact</h3>
         </a>
+      </nav>
+      <nav class="home nav">
+        <a class="nav-btn" href="../"
+          ><img
+            class="nav-img"
+            onmouseover="src='../src/img/logos/logo_ELR_wordmark.svg'"
+            onmouseout="src='../src/img/logos/logo_ELR_wordmark_gradient.svg'"
+            src="../src/img/logos/logo_ELR_wordmark_gradient.svg"
+            alt="ELR logo"
+        /></a>
       </nav>
     </div>
     <!-- bevel effect for header -->
