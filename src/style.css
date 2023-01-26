@@ -729,7 +729,7 @@ embed {
 /* ⋯⋯⋯ 5.1a ☏ Latest Videos ☏ ⋯⋯⋯ */
 @media (max-aspect-ratio: 4/3) {
     .videos > h1 {
-        margin-bottom: 3rem;
+        margin: 3rem 0;
     }
 
     .videos-wrapper {
@@ -738,20 +738,12 @@ embed {
     }
 
     .iframe.video {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: relative;
-        margin: 3rem;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-        height: auto;
-    }
 
-    .video.alt {
-        width: 80%;
-        height: auto;
+        width: calc(16rem * 2.3);
+        height: calc(9rem * 2.3);
+
+        transform: scale(0.9);
     }
 }
 
