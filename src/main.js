@@ -9,6 +9,7 @@ window.addEventListener("scroll", function () {
   //HTML Elements
   const nav = document.querySelector(".nav-wrapper");
   const toTop = this.document.querySelector(".back-to-top");
+  const cartBtn = this.document.querySelector(".cart-btn");
   let checkbox = document.getElementById("mobile-nav");
 
   if (window.pageYOffset > curScrollPos) {
@@ -30,12 +31,15 @@ window.addEventListener("scroll", function () {
 
   if (oldScrollPos < curScrollPos) {
     nav.classList.add("scroll");
+    cartBtn.classList.add("scroll");
   } else if (oldScrollPos > curScrollPos) {
     nav.classList.remove("scroll");
+    cartBtn.classList.remove("scroll");
   }
 
   if (checkbox.checked) {
     nav.classList.remove("scroll");
+    cartBtn.classList.remove("scroll");
   }
 });
 
@@ -50,6 +54,20 @@ document.addEventListener("click", function ClickOutsideNav(event) {
     }
   }
 });
+
+function expandMenuItems() {
+  const btnStore = document.getElementById("nav-store");
+  const storeMenu = document.getElementById("store-menu");
+
+  if (!btnStore.classList.contains("expand")) {
+    btnStore.classList.add("expand");
+    storeMenu.classList.add("expand");
+    console.log("clicked");
+  } else {
+    btnStore.classList.remove("expand");
+    storeMenu.classList.remove("expand");
+  }
+}
 
 function scrollToVideos() {
   const anchorHome = document.getElementById("videos");
