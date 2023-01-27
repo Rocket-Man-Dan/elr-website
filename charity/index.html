@@ -45,73 +45,47 @@
             alt="open mobile menu"
           />
         </a>
+
         <!-- nav for links -->
         <nav class="links nav">
           <div class="mobile-nav-hitbox"></div>
-          <a class="nav-btn" href="../store/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_merch.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_merch_white.svg"
-            />
-            <h3 style="--y: 0rem" class="btn-text">Shop</h3>
-          </a>
-
+          <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
+            <div class="nav-item-container">
+              <h3 style="--y: 0rem" class="btn-text">Shop</h3>
+              <img
+                class="nav-img nav-links"
+                src="../src/img/icons/icon_plus.svg"
+              />
+            </div>
+            <div class="nav-menu-expand" id="store-menu">
+              <a href="../store/" style="--y: 0rem" class="btn-text">On Sale</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Hats</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Hoodies</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Shirts</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text"
+                >Air Fresheners</a
+              >
+              <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
+              <a href="store/" style="--y: 0rem" class="btn-text"
+                >Mystery Boxes</a
+              >
+            </div>
+          </div>
           <a class="nav-btn" href="../giveaways/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_giveaways_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_giveaways_white.svg"
-            />
             <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
           </a>
           <a class="nav-btn" href="../charity/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_charity_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_charity_white.svg"
-            />
-            <h3 style="--y: 0.5rem" class="btn-text">Charity Partners</h3>
+            <h3 style="--y: 1rem" class="btn-text">Our Charity Partners</h3>
           </a>
           <a class="nav-btn" href="../social/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_social_media_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_social_media_white.svg"
-            />
-            <h3 style="--y: 0.75rem" class="btn-text">Social Media</h3>
+            <h3 style="--y: 0.75rem" class="btn-text">Follow Us</h3>
           </a>
           <a class="nav-btn" href="../contact/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_contact_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_contact_white.svg"
-            />
-            <h3 style="--y: 0rem" class="btn-text">Contact</h3>
+            <h3 style="--y: 0rem" class="btn-text">Contact Us</h3>
           </a>
         </nav>
         <nav class="home nav">
-          <a class="nav-btn" href="../"
+          <a class="nav-btn" href="./"
             ><img
               class="nav-img"
               onmouseover="src='../src/img/logos/logo_ELR_wordmark.svg'"
@@ -120,6 +94,10 @@
               alt="ELR logo"
           /></a>
         </nav>
+        <div onclick="location.href = '../cart/index.html';" class="cart-btn">
+          <img class="cart-icon" src="../src/img/icons/icon_cart.svg" alt="" />
+          <div id="cartAmount" class="cart-amount">0</div>
+        </div>
       </div>
       <!-- bevel effect for header -->
       <div class="nav-wrapper-border"></div>
@@ -128,10 +106,10 @@
     <!-- hero section -->
     <section class="charity">
       <img
-        style="--z-index: -10; --top: 6rem; --y: -115rem; --y-mob: -140rem"
+        style="--z-index: -10; --top: 6rem; --y: -115rem; --y-mob: -127rem"
         src="../src/img/shapes/graphic_bg_shape_swoop_2.svg"
         alt=""
-        class="shape charity-shape"
+        class="shape"
       />
       <div class="section-wrapper">
         <img
@@ -139,37 +117,59 @@
           src="../src/img/logos/charity/champstrong/logo_wordmark_champstrong_color.svg"
           alt=""
         />
+
         <div class="section-wrapper charity">
           <img
             class="charity-logo mobile"
             src="../src/img/logos/charity/champstrong/logo_wordmark_champstrong_color.svg"
             alt=""
           />
+          <img
+            class="photo"
+            src="../src/img/photos/charity/champstrong_photo_1.png"
+            alt=""
+          />
           <p>
-            Champstrong is a non-profit organization where we support, empower,
-            and raise funds for amputees who need prosthetics. We conduct peer
-            visits and provide education to amputees and their families,
-            ensuring they understand that life is not over post-amputation.
+            We are a non-profit that supports, empowers, and raises funds for
+            amputees all around the world.
             <br />
             <br />
-            We encourage good health practices and adaptive physical fitness as
-            a form of both physical and emotional therapy. The Champstrong brand
-            was created by an amputee for the amputees and supporters.
+            Locally, we conduct in-person visits to provide education for
+            amputees and their families. <br />
           </p>
+          <div class="photo-quote">
+            <h2>"Life is not over post-amputation."</h2>
+
+            <img
+              class="photo"
+              src="../src/img/photos/charity/champstrong_photo_3.png"
+              alt=""
+            />
+            <h2>-Djibril Champ Kande (Founder)</h2>
+          </div>
           <p>
             Our mission is to encourage, inspire, educate, and motivate
-            everyone. We aim towards helping amputees realize that they have
-            what it takes to have a new outlook on life and through daily
-            challenges and hardships. Champstrong is more than a brand, it
-            represents a lifestyle dedicated to raise awareness and inspire
-            people from all walks of life. You cannot spell Champs without “amp”
+            individuals living through amputation.
+            <br />
+            <br />
+
+            Champstrong is more than a brand, it represents the founder's
+            lifestyle. DJ has dedicated his life to raising awareness, inspiring
+            people, and changing lives.
           </p>
+          <h2>PLEASE GIVE A GIFT TODAY!!!</h2>
+          <button class="btn">DONATE</button>
         </div>
       </div>
       <div class="divider"></div>
       <div class="section-wrapper charity about-charity">
         <h1>About Me</h1>
-        <p>
+        <img
+          class="photo"
+          src="../src/img/photos/charity/champstrong_photo_2.png"
+          alt=""
+        />
+        <p class="charity-about-me">
           Djibril Champ Kande is an incredibly inspiring individual who has
           overcome a great deal of challenges and adversity in his life. Despite
           losing a limb, he has not let this setback hold him back and has
@@ -186,51 +186,6 @@
           src="../src/img/shapes/graphic_bg_shape_swoop_1.svg"
           alt=""
           class="shape"
-        />
-        <img
-          class="photo"
-          style="
-            --x: 0rem;
-            --y: 48rem;
-            --h: 40rem;
-            --z-index: 0;
-            --x-mob: 0rem;
-            --y-mob: 60rem;
-            --h-mob: 36rem;
-            --display: block;
-          "
-          src="../src/img/photos/charity/champstrong_photo_1.png"
-          alt=""
-        />
-        <img
-          class="photo"
-          style="
-            --x: -58rem;
-            --y: 20rem;
-            --h: 40rem;
-            --z-index: 20;
-            --x-mob: 0rem;
-            --y-mob: -21rem;
-            --h-mob: 20rem;
-            --display: block;
-          "
-          src="../src/img/photos/charity/champstrong_photo_2.png"
-          alt=""
-        />
-        <img
-          class="photo"
-          style="
-            --x: 58rem;
-            --y: 12rem;
-            --h: 40rem;
-            --z-index: 20;
-            --x-mob: 10rem;
-            --y-mob: 40rem;
-            --h-mob: 16rem;
-            --display: none;
-          "
-          src="../src/img/photos/charity/champstrong_photo_3.png"
-          alt=""
         />
       </div>
     </section>
