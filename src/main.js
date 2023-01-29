@@ -27,7 +27,7 @@ window.addEventListener("scroll", function () {
   // console.log("oldScrollPos " + oldScrollPos)
   curScrollPos = this.scrollY;
   // console.log("curScrollPos " + curScrollPos)
-  console.log("window y " + this.scrollY);
+  // console.log("window y " + this.scrollY);
 
   if (oldScrollPos < curScrollPos) {
     nav.classList.add("scroll");
@@ -50,7 +50,7 @@ document.addEventListener("click", function ClickOutsideNav(event) {
   if (checkbox.checked) {
     if (nav.contains(event.target)) {
       checkbox.checked = false;
-      console.log("clicked");
+      // console.log("clicked");
     }
   }
 });
@@ -160,4 +160,40 @@ if (isInStore !== null) {
   generateStore();
 
   calculation();
+}
+
+window.onload = function () {
+  changeSwiper();
+  // let tiktokEmbed = document.getElementById("root");
+  // let tiktokSection = document.getElementById("root")[0];
+  // console.log(tiktokSection);
+  // tiktokSection.style.backgroundColor = "yellow";
+};
+
+function changeSwiper() {
+  console.log("running changeSwiper()...");
+  var cols = document.querySelectorAll(".swiper-wrapper");
+  console.log("length of array cols: " + cols.length);
+  console.log("item 1 of array cols: " + cols[0]);
+  for (i = 0; i < cols.length; i++) {
+    console.log("yt thingy" + cols[i]);
+    cols[i].style.height = "100%";
+    // cols[i].style.margin = "1rem";
+  }
+}
+
+function delay() {
+  setTimeout(function () {
+    changeSwiper();
+  }, 200);
+}
+
+if (document.readyState == "complete") {
+  delay();
+} else {
+  document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+      delay();
+    }
+  };
 }

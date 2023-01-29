@@ -46,69 +46,43 @@
             alt="open mobile menu"
           />
         </a>
+
         <!-- nav for links -->
         <nav class="links nav">
           <div class="mobile-nav-hitbox"></div>
-          <a class="nav-btn" href="../store/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_merch.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_merch_white.svg"
-            />
-            <h3 style="--y: 0rem" class="btn-text">Shop</h3>
-          </a>
-
+          <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
+            <div class="nav-item-container">
+              <h3 style="--y: 0rem" class="btn-text">Shop</h3>
+              <img
+                class="nav-img nav-links"
+                src="../src/img/icons/icon_plus.svg"
+              />
+            </div>
+            <div class="nav-menu-expand" id="store-menu">
+              <a href="../store/" style="--y: 0rem" class="btn-text">On Sale</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Hats</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Hoodies</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Shirts</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text"
+                >Air Fresheners</a
+              >
+              <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
+              <a href="store/" style="--y: 0rem" class="btn-text"
+                >Mystery Boxes</a
+              >
+            </div>
+          </div>
           <a class="nav-btn" href="../giveaways/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_giveaways_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_giveaways_white.svg"
-            />
             <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
           </a>
           <a class="nav-btn" href="../charity/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_charity_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_charity_white.svg"
-            />
-            <h3 style="--y: 0.5rem" class="btn-text">Charity Partners</h3>
+            <h3 style="--y: 1rem" class="btn-text">Our Charity Partners</h3>
           </a>
           <a class="nav-btn" href="../social/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_social_media_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_social_media_white.svg"
-            />
-            <h3 style="--y: 0.75rem" class="btn-text">Social Media</h3>
+            <h3 style="--y: 0.75rem" class="btn-text">Follow Us</h3>
           </a>
           <a class="nav-btn" href="../contact/">
-            <img
-              class="nav-img"
-              src="../src/img/nav_icons/icon_contact_gradient.svg"
-              alt="merch"
-            />
-            <img
-              class="nav-img alt"
-              src="../src/img/nav_icons/icon_contact_white.svg"
-            />
-            <h3 style="--y: 0rem" class="btn-text">Contact</h3>
+            <h3 style="--y: 0rem" class="btn-text">Contact Us</h3>
           </a>
         </nav>
         <nav class="home nav">
@@ -121,6 +95,10 @@
               alt="ELR logo"
           /></a>
         </nav>
+        <div onclick="location.href = '../cart/index.html';" class="cart-btn">
+          <img class="cart-icon" src="../src/img/icons/icon_cart.svg" alt="" />
+          <div id="cartAmount" class="cart-amount">0</div>
+        </div>
       </div>
       <!-- bevel effect for header -->
       <div class="nav-wrapper-border"></div>

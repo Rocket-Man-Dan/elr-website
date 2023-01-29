@@ -37,14 +37,11 @@
         </div>
         <a class="nav-mobile" href="">
           <img
-            src="src/img/nav_icons/icon_mobile_menu_white.svg"
+            src="./src/img/nav_icons/icon_mobile_menu_white.svg"
             alt="open mobile menu"
           />
         </a>
-        <div onclick="location.href = '../cart/index.html';" class="cart-btn">
-          <img class="cart-icon" src="./src/img/icons/icon_cart.svg" alt="" />
-          <div id="cartAmount" class="cart-amount">0</div>
-        </div>
+
         <!-- nav for links -->
         <nav class="links nav">
           <div class="mobile-nav-hitbox"></div>
@@ -53,15 +50,15 @@
               <h3 style="--y: 0rem" class="btn-text">Shop</h3>
               <img
                 class="nav-img nav-links"
-                src="src/img/icons/icon_plus.svg"
+                src="./src/img/icons/icon_plus.svg"
               />
             </div>
             <div class="nav-menu-expand" id="store-menu">
-              <a href="store/" style="--y: 0rem" class="btn-text">On Sale</a>
-              <a href="store/" style="--y: 0rem" class="btn-text">Hats</a>
-              <a href="store/" style="--y: 0rem" class="btn-text">Hoodies</a>
-              <a href="store/" style="--y: 0rem" class="btn-text">Shirts</a>
-              <a href="store/" style="--y: 0rem" class="btn-text"
+              <a href="./store/" style="--y: 0rem" class="btn-text">On Sale</a>
+              <a href="./store/" style="--y: 0rem" class="btn-text">Hats</a>
+              <a href="./store/" style="--y: 0rem" class="btn-text">Hoodies</a>
+              <a href="./store/" style="--y: 0rem" class="btn-text">Shirts</a>
+              <a href="./store/" style="--y: 0rem" class="btn-text"
                 >Air Fresheners</a
               >
               <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
@@ -70,16 +67,16 @@
               >
             </div>
           </div>
-          <a class="nav-btn" href="giveaways/">
+          <a class="nav-btn" href="./giveaways/">
             <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
           </a>
-          <a class="nav-btn" href="charity/">
+          <a class="nav-btn" href="./charity/">
             <h3 style="--y: 1rem" class="btn-text">Our Charity Partners</h3>
           </a>
-          <a class="nav-btn" href="social/">
+          <a class="nav-btn" href="./social/">
             <h3 style="--y: 0.75rem" class="btn-text">Follow Us</h3>
           </a>
-          <a class="nav-btn" href="contact/">
+          <a class="nav-btn" href="./contact/">
             <h3 style="--y: 0rem" class="btn-text">Contact Us</h3>
           </a>
         </nav>
@@ -87,21 +84,22 @@
           <a class="nav-btn" href="./"
             ><img
               class="nav-img"
-              onmouseover="src='src/img/logos/logo_ELR_wordmark.svg'"
-              onmouseout="src='src/img/logos/logo_ELR_wordmark_gradient.svg'"
-              src="src/img/logos/logo_ELR_wordmark_gradient.svg"
+              onmouseover="src='./src/img/logos/logo_ELR_wordmark.svg'"
+              onmouseout="src='./src/img/logos/logo_ELR_wordmark_gradient.svg'"
+              src="./src/img/logos/logo_ELR_wordmark_gradient.svg"
               alt="ELR logo"
           /></a>
         </nav>
+        <div onclick="location.href = './cart/index.html';" class="cart-btn">
+          <img class="cart-icon" src="./src/img/icons/icon_cart.svg" alt="" />
+          <div id="cartAmount" class="cart-amount">0</div>
+        </div>
       </div>
       <!-- bevel effect for header -->
       <div class="nav-wrapper-border"></div>
     </header>
     <!-- hero section -->
     <section class="hero" id="hero">
-      <div class="btn-wrapper" onclick="scrollToVideos()">
-        <span class="recent-uploads btn">Latest Video</span>
-      </div>
       <img class="hero-img" src="src/img/logos/logo_ELR_slate.png" alt="" />
       <video
         playsinline
@@ -111,16 +109,9 @@
         class="hero-video"
         src="src/video/video4994974728193049495.mp4"
       ></video>
-    </section>
-    <!-- videos section -->
-    <section class="videos" id="videos">
-      <h1>Like To Watch</h1>
-      <iframe
-        class="iframe video main"
-        src="https://www.youtube.com/embed?listType=playlist&list=UUj_ARBxhCoF5JxUItcEUs7Q"
-      >
-      </iframe>
-      <!-- 2nd and 3rd latest videos -->
+      <div class="btn-wrapper" onclick="scrollToVideos()">
+        <span class="recent-uploads btn">Latest Video</span>
+      </div>
     </section>
     <section class="about">
       <h1>About Us</h1>
@@ -139,6 +130,44 @@
         people.
       </p>
     </section>
+    <!-- videos section -->
+    <section class="videos" id="videos">
+      <h1>Like To Watch?</h1>
+
+      <div class="section-wrapper tiktok">
+        <div class="tiktok-bg"></div>
+        <img
+          class="tiktok-logo"
+          src="./src/img/logos/social_media/logo_youtube.svg"
+          alt=""
+        />
+        <div class="tiktok-shadowbox"></div>
+        <div class="sk-ww-youtube-channel-videos" data-embed-id="113560"></div>
+        <script
+          src="https://widgets.sociablekit.com/youtube-channel-videos/widget.js"
+          async
+          defer
+        ></script>
+      </div>
+      <div class="section-wrapper tiktok">
+        <div class="tiktok-bg"></div>
+        <img
+          class="tiktok-logo"
+          src="./src/img/logos/social_media/logo_tiktok.svg"
+          alt=""
+        />
+        <div class="tiktok-shadowbox"></div>
+        <div class="sk-tiktok-feed" data-embed-id="113544"></div>
+        <script
+          src="https://widgets.sociablekit.com/tiktok-feed/widget.js"
+          async
+          defer
+        ></script>
+      </div>
+
+      <!-- 2nd and 3rd latest videos -->
+    </section>
+
     <section>
       <h1>Like To Read?</h1>
       <p>
