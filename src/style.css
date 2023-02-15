@@ -41,7 +41,6 @@
 ―――――――― 7.2a ☏ JS DOM ☏
 
 ⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮ TABLE OF CONTENTS ⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮⋮ */
-
 * {
     padding: 0;
     margin: 0;
@@ -266,17 +265,8 @@ p {
     opacity: 100%;
 }
 
-.cart-btn {
-    z-index: 999;
-    margin-top: -95vh;
-    margin-left: 148vh;
-    position: fixed;
-
-    /* outline: 0.1rem solid red; */
-}
-
 .cart-icon {
-    height: 35%;
+    height: 3rem;
     /* background-color: aliceblue; */
     padding: 0.4vh;
     padding-right: 0.8vh;
@@ -397,6 +387,7 @@ p {
 
         height: 100%;
         width: 25%;
+        transform: scale(1);
         /* transform: scale(0.6); */
 
         /* border: 0.1rem solid red; */
@@ -476,7 +467,7 @@ p {
 }
 
 .header-space {
-    height: 12rem;
+    height: 8rem;
 }
 
 .home {
@@ -496,7 +487,7 @@ p {
     display: flex;
     position: relative;
     width: 100%;
-    height: 12vh;
+    height: 8rem;
     background-image: linear-gradient(
         to right,
         var(--color-main-dark),
@@ -511,7 +502,7 @@ p {
     display: flex;
     position: relative;
     width: 100vw;
-    height: 1vh;
+    height: 0.75rem;
     background-image: linear-gradient(
         to left,
         var(--color-main-dark),
@@ -679,6 +670,8 @@ p {
     height: 0.5rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
+
+    position: relative;
 }
 
 /* ⋯⋯⋯ 4.0b Shapes ⋯⋯⋯ */
@@ -689,6 +682,19 @@ p {
     transform: translateY(var(--y));
     filter: drop-shadow(0rem 0rem 6rem var(--color-main-purple-50));
     /* opacity: 25%; */
+}
+
+@media (max-aspect-ratio: 4/3) {
+    .shape {
+        z-index: var(--z-index);
+        position: absolute;
+        width: 100vw;
+        transform: translateY(var(--y-mob));
+        top: var(--top);
+        /* transform: translateY(0rem); */
+        filter: drop-shadow(0rem 0rem 6rem var(--color-main-purple-50));
+        /* opacity: 25%; */
+    }
 }
 
 section {
@@ -770,6 +776,7 @@ embed {
 @media (max-aspect-ratio: 4/3) {
     section {
         flex-direction: column;
+        height: fit-content;
         text-align: center;
     }
 
@@ -954,19 +961,26 @@ embed {
     }
     .sk-yt-all-posts > div div {
         height: 100% !important;
-        width: 85% !important;
+        width: 70% !important;
     }
 
     .sk_youtube_channel_videos_slider .swiper-container .swiper-slide {
         transform: unset !important;
-        transform: scale(0.9) translateX(5%) translateY(5%) !important;
+        transform: scale(0.9) translateX(16%) translateY(5%) !important;
         filter: drop-shadow(0rem 0rem 0.5rem black) !important;
         /* transform: scale(0.9) !important; */
     }
 
     .sk_youtube_channel_videos_slider .swiper-container .swiper-slide-next {
         transform: unset !important;
-        transform: scale(0.9) translateY(5%) translateX(-10%) !important;
+        transform: scale(0.9) translateY(5%) translateX(-15%) !important;
+
+        /* transform: scale(0.9) !important; */
+    }
+
+    .sk_youtube_channel_videos_slider .swiper-container .swiper-slide-prev {
+        transform: unset !important;
+        transform: scale(0.9) translateY(5%) translateX(47%) !important;
 
         /* transform: scale(0.9) !important; */
     }
@@ -1055,10 +1069,11 @@ embed {
         position: relative;
 
         padding: 4rem 2rem;
-        height: calc(160px * 4);
+        height: calc(160px * 3);
         width: calc(90px * 4);
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow: hidden;
+
+        /* overflow-y: hidden; */
     }
     .tiktok-shadowbox {
         z-index: 99;
@@ -1275,24 +1290,10 @@ embed {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100%;
+        height: fit-content;
         padding: 0;
         margin-top: 0rem;
-        /* overflow-x: hidden; */
-    }
-
-    .charity .shape:nth-child(1) {
-        position: relative;
-        width: 100%;
-        transform: unset;
-        margin-top: -12rem;
-        margin-bottom: -8rem;
-    }
-
-    .about-charity .shape {
-        position: absolute;
-        width: 100%;
-        transform: translateY(-36rem);
+        overflow-x: hidden;
     }
 
     .charity .btn {
@@ -1301,7 +1302,10 @@ embed {
     }
 
     .section-wrapper.charity {
-        margin: 0;
+        flex-direction: column;
+
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
 
     .section-wrapper.charity p {
@@ -1319,7 +1323,6 @@ embed {
     .photo-quote {
         width: 100%;
         position: relative;
-        overflow: hidden;
     }
 
     .photo-quote h2 {
@@ -1344,21 +1347,20 @@ embed {
         font-size: var(--font-size-med);
     }
 
-    .section-wrapper .photo:nth-child(2) {
+    .section-wrapper .photo {
         z-index: 0;
-        position: relative;
-        width: 80%;
-        margin: 4rem 0;
+
+        width: var(--width);
+        margin: var(--margin);
     }
     .section-wrapper .photo:nth-child(3) {
-        position: relative;
         width: 70%;
         margin: 4rem 0;
         /* filter: drop-shadow(0rem 0rem 1rem var(--color-main-purple-50)); */
     }
     .section-wrapper.about-charity .photo:nth-child(2) {
         z-index: 11;
-        position: relative;
+
         width: 60%;
         margin: 3rem 0;
         /* filter: drop-shadow(0rem 0rem 1rem var(--color-main-purple-50)); */
@@ -1369,17 +1371,10 @@ embed {
     }
 
     .charity-logo {
-        display: none;
-        margin: 0vh 20rem;
-        margin-bottom: -40rem;
-        width: 80%;
-        position: relative;
-    }
-
-    .charity-logo.mobile {
         display: flex;
         margin: 0;
         margin-bottom: -4rem;
+        margin-top: 6rem;
         padding: 0;
         height: 35rem;
         position: relative;
@@ -2169,42 +2164,42 @@ footer {
 
 /* ⋯⋯⋯ 7.1 Scroll Up Header ⋯⋯⋯ */
 .nav-wrapper.scroll {
-    height: 4vh;
+    height: 2rem;
 }
 
 .nav-wrapper.scroll > .btn-burger-container > .btn-burger {
-    width: 2vh;
-    height: 2vh;
-    right: 1vh;
+    width: 1rem;
+    height: 1rem;
+    right: 1rem;
 }
 
 @media (min-aspect-ratio: 4/3) {
     .nav-wrapper.scroll > .links > a {
-        margin: 2.75vh;
+        margin: 2.75rem;
     }
 
     .nav-wrapper.scroll > .home > a > img {
-        height: 2vh;
+        height: 2rem;
     }
 
     .nav-wrapper.scroll > .links > a > img {
-        height: 2vh;
+        height: 2rem;
     }
 
     .nav-wrapper.scroll > .links > .text {
-        font-size: 1vh;
+        font-size: 1rem;
     }
 
     .nav-wrapper.scroll > .links > a > .btn-text {
-        font-size: 1.45vh;
-        margin-top: 0vh;
+        font-size: 1.45rem;
+        margin-top: 0rem;
         color: WHITE;
     }
 }
 
 @media (max-aspect-ratio: 4/3) {
     .nav-wrapper.scroll > .home > .nav-btn > .nav-img {
-        height: 2vh;
+        height: 1rem;
     }
 
     .back-to-top.scroll {
@@ -2213,7 +2208,7 @@ footer {
 
     .cart-btn.scroll {
         margin: 0;
-        top: -0.5rem;
+        top: 0.1rem;
         transform: scale(0.4);
     }
 }
@@ -2228,3 +2223,62 @@ footer {
 * {
     outline: 1px solid #f00 !important;
 } */
+
+.slider-container {
+    height: 100%;
+    /* width: 100%; */
+    display: inline-flex;
+    position: absolute;
+    left: 0rem;
+    /* display: flex; */
+    /* overflow: hidden; */
+    scrollbar-width: none;
+    transform: translateX(0);
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+    /* outline: 0.25rem solid red; */
+}
+
+.slide {
+    /* height: 50%; */
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    /* outline: 0.25rem solid red; */
+}
+
+@media (min-width: 1200px) {
+    .slide {
+        padding: 3rem;
+    }
+}
+
+.slide img {
+    transform: translateY(2rem);
+    width: 60%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0rem 0rem 3rem 0.15rem var(--color-main-dark);
+
+    border-radius: var(--border-size-small);
+    user-select: none;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+.grabbing .slide img {
+    transform: scale(0.9);
+    box-shadow: 0rem 0rem 3rem 0.15rem var(--color-main-dark);
+}
+
+.next-swipe-card {
+    transform: translateX(-60%) translateY(2rem) !important;
+}
+
+.prev-swipe-card {
+    transform: translateX(60%) translateY(2rem) !important;
+}
