@@ -130,15 +130,78 @@
       </p>
     </section>
     <!-- videos section -->
+    <div class="video-viewer">
+      <div class="video-container">
+        <div class="yt-btn-container">
+          <img
+            onclick="closeMediaViewer();"
+            class="close-media-player"
+            src="./src/img/icons/icon_x.svg"
+            alt=""
+          />
+        </div>
+        <iframe
+          class="yt-shorts-player"
+          src="https://www.youtube.com/embed/RakZheijMZQ?&&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&mute=1"
+          title="Phantom or Ghost? Which #RollsRoyce would you get?"
+          frameborder="0"
+          allow="autoplay;"
+          allowfullscreen
+        ></iframe>
+        <div></div>
+      </div>
+      <div></div>
+    </div>
     <section class="videos" id="videos">
       <h1>Like To Watch?</h1>
       <div class="section-wrapper tiktok">
         <img
-          class="tiktok-logo"
+          onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
+          class="slider-social-logo"
           src="./src/img/logos/social_media/logo_youtube.svg"
           alt=""
         />
-        <div class="slider-container">
+        <div class="slider-container" id="sliderYoutube">
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description"
+            />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description"
+            />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description"
+            />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description"
+            />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description"
+            />
+          </div>
           <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
             <img
@@ -186,11 +249,12 @@
 
       <div class="section-wrapper tiktok">
         <img
-          class="tiktok-logo"
+          onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
+          class="slider-social-logo"
           src="./src/img/logos/social_media/logo_tiktok.svg"
           alt=""
         />
-        <div class="slider-container">
+        <div class="slider-container" id="sliderTiktok">
           '
           <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
@@ -239,11 +303,12 @@
 
       <div class="section-wrapper tiktok">
         <img
-          class="tiktok-logo"
-          src="./src/img/logos/social_media/logo_tiktok.svg"
+          onclick="location.href = 'https://www.instagram.com/exoticluxuryreviews/';"
+          class="slider-social-logo"
+          src="./src/img/logos/social_media/logo_instagram.svg"
           alt=""
         />
-        <div class="slider-container">
+        <div class="slider-container" id="sliderInstagram">
           '
           <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
@@ -298,12 +363,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis?
       </p>
     </section>
-    <!-- <section>
-      <h1>Like To Listen?</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis?
-      </p>
-    </section> -->
+
     <footer>
       <div class="footer-left">
         <img src="./src/img/logos/logo_ELR_wordmark.svg" alt="" />
@@ -350,6 +410,7 @@
       </div>
     </footer>
   </body>
+  <script src="src/update_socials.js"></script>
   <script src="src/main.js?v=1"></script>
   <script src="src/swipe.js?v=1"></script>
 </html>

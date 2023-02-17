@@ -805,37 +805,6 @@ embed {
         transform: scale(0.9);
     }
 
-    .sk-tiktok-feed {
-        width: 100%;
-        height: 90% !important;
-        transform: scale(1) translateY(2.5rem);
-    }
-
-    .sk-tiktok-feed {
-        background: none !important;
-    }
-
-    .sk-ig-all-posts {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        /* height: fit-content !important; */
-        /* width: fit-content !important; */
-    }
-
-    .sk-slider-container {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        margin-left: auto;
-        margin-right: auto;
-
-        width: 100%;
-        height: 100% !important;
-        background-color: none !important;
-        /* border: 0.1rem solid red; */
-    }
-
     button.swiper-button-prev,
     button.swiper-button-next {
         width: 4rem !important;
@@ -1062,51 +1031,6 @@ embed {
         height: 100% !important;
         margin: 0 !important;
         /* border: 0.1rem solid red; */
-    }
-
-    .section-wrapper.tiktok {
-        z-index: 90;
-        position: relative;
-
-        padding: 4rem 2rem;
-        height: calc(160px * 3);
-        width: calc(90px * 4);
-        overflow: hidden;
-
-        /* overflow-y: hidden; */
-    }
-    .tiktok-shadowbox {
-        z-index: 99;
-        /* position: relative; */
-        position: absolute;
-
-        user-select: none !important;
-        pointer-events: none !important;
-
-        width: 100% !important;
-        height: 100% !important;
-
-        border: 2rem solid var(--color-bg);
-        border-image-slice: 1;
-        /* border-image-source: linear-gradient(
-            45deg,
-            var(--color-main-purple),
-            var(--color-main-orange)
-        ); */
-
-        box-shadow: inset 0 0 10px black;
-    }
-
-    .tiktok-logo {
-        z-index: 0;
-        position: absolute;
-        top: 2rem;
-        left: 2rem;
-        padding: 1.5rem 1.5rem;
-        width: 30%;
-        /* height: 100%; */
-        background-color: var(--color-main-dark-75);
-        border-radius: 0rem 0rem var(--border-size-med) 0rem;
     }
 }
 
@@ -2224,7 +2148,181 @@ footer {
     outline: 1px solid #f00 !important;
 } */
 
+.video-viewer {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+
+    backdrop-filter: blur(5px);
+
+    background-image: linear-gradient(
+        to top,
+        var(--color-main-orange-50),
+        var(--color-main-purple-50)
+    );
+}
+
+.video-container {
+    width: calc(9rem * 4.25);
+    height: calc(16rem * 4.25);
+
+    position: absolute;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: -10rem;
+    bottom: 0;
+
+    transform: scale(0.9);
+}
+
+.yt-shorts-player {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    width: calc(9rem * 4.25);
+    height: calc(16rem * 4.25);
+
+    border-radius: var(--border-size-large);
+
+    -webkit-mask-image: radial-gradient(
+        circle at 88.5% 6.5%,
+        rgba(0, 0, 0, 0) 5.25%,
+        rgba(0, 0, 0, 1) 5.5%
+    );
+    mask-image: radial-gradient(
+        circle at 88.5% 6.5%,
+        rgba(0, 0, 0, 0) 5.25%,
+        rgba(0, 0, 0, 1) 5.5%
+    );
+
+    background-color: black;
+}
+
+.video-container div:last-child {
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    border: 0.525rem solid black;
+
+    width: calc(9rem * 4.25);
+    height: calc(16rem * 4.25);
+
+    border-radius: var(--border-size-large);
+    filter: drop-shadow(0rem 0rem 0.5rem black)
+        drop-shadow(0rem 0rem 1rem black);
+    /* box-shadow: 0rem 0rem 2rem 0.2rem rgb(0, 0, 0); */
+}
+
+.yt-btn-container {
+    z-index: 999;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    transform: translate(246%, -494%);
+}
+
+.close-media-player {
+    transition: all ease-in-out 100ms;
+    z-index: 999;
+    position: absolute;
+    width: 6rem;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    filter: drop-shadow(0rem 0rem 0.5rem black);
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.close-media-player:hover,
+.close-media-player:active {
+    transform: scale(1.1);
+}
+
+.section-wrapper.tiktok {
+    z-index: 15;
+    position: relative;
+
+    padding: 4rem 2rem;
+    height: calc(160px * 3);
+    width: calc(90px * 4);
+    overflow: hidden;
+
+    /* overflow-y: hidden; */
+}
+.tiktok-shadowbox {
+    z-index: 20;
+    /* position: relative; */
+    position: absolute;
+
+    user-select: none !important;
+    pointer-events: none !important;
+
+    height: 100%;
+    width: 100%;
+
+    border: 2rem solid var(--color-bg);
+
+    /* border-image-source: linear-gradient(
+        45deg,
+        var(--color-main-purple),
+        var(--color-main-orange)
+    ); */
+
+    box-shadow: inset 0 0 10px black;
+}
+
+.slider-social-logo {
+    z-index: 10;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 1.5rem 1.5rem;
+    width: 30%;
+    /* height: 100%; */
+    background-color: var(--color-main-dark-75);
+    border-radius: 0rem 0rem var(--border-size-med) 0rem;
+}
+.slider-social-logo:hover,
+.slider-social-logo:active {
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
 .slider-container {
+    z-index: -10;
+
     height: 100%;
     /* width: 100%; */
     display: inline-flex;
@@ -2241,6 +2339,8 @@ footer {
 }
 
 .slide {
+    z-index: -30;
+    position: relative;
     /* height: 50%; */
     width: 90%;
     display: flex;
@@ -2257,6 +2357,8 @@ footer {
 }
 
 .slide img {
+    z-index: -30;
+    position: relative;
     transform: translateY(2rem);
     width: 60%;
     transition: transform 0.3s ease-in-out;

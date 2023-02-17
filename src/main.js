@@ -162,3 +162,15 @@ if (isInStore !== null) {
 
   calculation();
 }
+
+// ---------- Shorts Player ---------- //
+const mediaViewer = document.querySelector("div.video-viewer");
+
+const ytEmbed = document.querySelector("iframe.yt-shorts-player");
+
+const ytShortsExitBtn = document.querySelector("close-media-player");
+
+function closeMediaViewer() {
+  ytEmbed.src = "";
+  mediaViewer.style.display = "none";
+}

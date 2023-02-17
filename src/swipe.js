@@ -3,15 +3,21 @@ const sliders = document.querySelectorAll(".slider-container");
 const indexArray = [];
 const containerWidth = document.querySelector(".section-wrapper").offsetWidth;
 
+let ytVidIDs = [];
+let clickIndex = 0;
+
 // set up our state
 let isDragging = false,
-  startPos = 0,
-  currentTranslate = 0,
-  prevTranslate = 0,
-  animationID,
-  currentIndex = 0;
+  startPos = [],
+  currentTranslate = [],
+  prevTranslate = [],
+  animationID;
 
 sliders.forEach((slider, i) => {
+  currentTranslate[i] = 0;
+  prevTranslate[i] = 0;
+  startPos[i] = 0;
+
   const slides = Array.from(slider.children);
 
   slider.style.width = `calc(100% * ${slides.length})`;
@@ -21,9 +27,14 @@ sliders.forEach((slider, i) => {
   slides.forEach((slide, index) => {
     const slideImage = slide.querySelector("img");
     setNextPrevCards();
+
     // disable default image drag
     slideImage.addEventListener("dragstart", (e) => e.preventDefault());
+    slideImage.addEventListener("dragstart", (e) =>
+      e.stopImmediatePropagation()
+    );
     // touch events
+
     slide.addEventListener("touchstart", touchStart(index));
     slide.addEventListener("touchend", touchEnd);
 
@@ -34,6 +45,8 @@ sliders.forEach((slider, i) => {
 
     slide.addEventListener("mousemove", touchMove);
     slide.addEventListener("mouseleave", touchEnd);
+
+    slideImage.addEventListener("click", openYtShortVideo);
   });
 
   // make responsive to viewport changes
@@ -56,7 +69,8 @@ sliders.forEach((slider, i) => {
   function touchStart(index) {
     return function (event) {
       indexArray[i] = index;
-      startPos = getPositionX(event);
+      clickIndex = index;
+      startPos[i] = getPositionX(event);
       isDragging = true;
       animationID = requestAnimationFrame(animation);
       slider.classList.add("grabbing");
@@ -64,9 +78,10 @@ sliders.forEach((slider, i) => {
   }
 
   function touchMove(event) {
+    // console.log("current trans " + currentTranslate[i]);
     if (isDragging) {
       const currentPosition = getPositionX(event);
-      currentTranslate = prevTranslate + currentPosition - startPos;
+      currentTranslate[i] = prevTranslate[i] + currentPosition - startPos[i];
     }
   }
 
@@ -75,7 +90,7 @@ sliders.forEach((slider, i) => {
     cancelAnimationFrame(animationID);
     isDragging = false;
 
-    const movedBy = currentTranslate - prevTranslate;
+    const movedBy = currentTranslate[i] - prevTranslate[i];
 
     // if moved enough negative then snap to next slide if there is one
     if (movedBy < -100 && indexArray[i] < slides.length - 1) indexArray[i] += 1;
@@ -95,13 +110,13 @@ sliders.forEach((slider, i) => {
   }
 
   function setPositionByIndex() {
-    currentTranslate = indexArray[i] * -containerWidth;
-    prevTranslate = currentTranslate;
+    currentTranslate[i] = indexArray[i] * -containerWidth;
+    prevTranslate[i] = currentTranslate[i];
     setSliderPosition();
   }
 
   function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}px)`;
+    slider.style.transform = `translateX(${currentTranslate[i]}px)`;
   }
 
   function setNextPrevCards() {
@@ -152,3 +167,43 @@ sliders.forEach((slider, i) => {
 });
 
 //currentindex + 1 transform translateX
+
+// console.log(mediaViewer);
+
+// using open source API at https://yt.lemnoslife.com/
+
+const ytSlider = document.getElementById("sliderYoutube");
+
+let ytThumbs = Array.from(ytSlider.children);
+
+async function loadYT() {
+  const response = await fetch("./api/yt_videos_info.json");
+  const ytJson = await response.json();
+  console.log(ytJson);
+
+  let ytVideos = ytJson.items[0].shorts;
+  let ytThumbIds = [];
+
+  ytVideos.forEach((vid, i) => {
+    ytThumbIds[i] = vid.thumbnails[0].url;
+    ytVidIDs[i] = vid.videoId;
+
+    ytThumbs.forEach((url, j) => {
+      let img = url.children;
+
+      img[0].src = ytThumbIds[j];
+    });
+  });
+}
+loadYT();
+
+function openYtShortVideo() {
+  console.log("clicked " + clickIndex);
+  mediaViewer.style.display = "block";
+  ytEmbed.src =
+    "https://www.youtube.com/embed/" +
+    ytVidIDs[clickIndex] +
+    "?&&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&mute=1";
+}
+
+mediaViewer.style.display = "none";
