@@ -49,15 +49,13 @@
 
         <!-- nav for links -->
         <nav class="links nav">
+          <input type="checkbox" id="shop-dropdown" style="display: none" />
           <div class="mobile-nav-hitbox"></div>
           <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
-            <div class="nav-item-container">
+            <label for="shop-dropdown" class="nav-item-container">
               <h3 style="--y: 0rem" class="btn-text">Shop</h3>
-              <img
-                class="nav-img nav-links"
-                src="../src/img/icons/icon_plus.svg"
-              />
-            </div>
+              <div class="nav-img nav-links"></div>
+            </label>
             <div class="nav-menu-expand" id="store-menu">
               <a href="../store/" style="--y: 0rem" class="btn-text">On Sale</a>
               <a href="../store/" style="--y: 0rem" class="btn-text">Hats</a>
@@ -66,8 +64,10 @@
               <a href="../store/" style="--y: 0rem" class="btn-text"
                 >Air Fresheners</a
               >
-              <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
-              <a href="store/" style="--y: 0rem" class="btn-text"
+              <a href="../store/" style="--y: 0rem" class="btn-text"
+                >Stickers</a
+              >
+              <a href="../store/" style="--y: 0rem" class="btn-text"
                 >Mystery Boxes</a
               >
             </div>

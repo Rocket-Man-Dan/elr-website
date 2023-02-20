@@ -44,15 +44,13 @@
 
         <!-- nav for links -->
         <nav class="links nav">
+          <input type="checkbox" id="shop-dropdown" style="display: none" />
           <div class="mobile-nav-hitbox"></div>
           <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
-            <div class="nav-item-container">
+            <label for="shop-dropdown" class="nav-item-container">
               <h3 style="--y: 0rem" class="btn-text">Shop</h3>
-              <img
-                class="nav-img nav-links"
-                src="./src/img/icons/icon_plus.svg"
-              />
-            </div>
+              <div class="nav-img nav-links"></div>
+            </label>
             <div class="nav-menu-expand" id="store-menu">
               <a href="./store/" style="--y: 0rem" class="btn-text">On Sale</a>
               <a href="./store/" style="--y: 0rem" class="btn-text">Hats</a>
@@ -109,9 +107,9 @@
         class="hero-video"
         src="src/video/video4994974728193049495.mp4"
       ></video>
-      <div class="btn-wrapper" onclick="scrollToVideos()">
-        <span class="recent-uploads btn">Latest Video</span>
-      </div>
+      <button onclick="scrollToVideos()" class="recent-uploads btn" btn>
+        Latest Video
+      </button>
     </section>
     <section class="about">
       <h1>About Us</h1>
@@ -154,214 +152,210 @@
     </div>
     <section class="videos" id="videos">
       <h1>Like To Watch?</h1>
-      <div class="section-wrapper tiktok">
-        <img
-          onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
-          class="slider-social-logo"
-          src="./src/img/logos/social_media/logo_youtube.svg"
-          alt=""
-        />
-        <div class="slider-container" id="sliderYoutube">
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
+      <div class="section-wrapper">
+        <div class="section-wrapper social-slider">
+          <img
+            onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
+            class="slider-social-logo"
+            src="./src/img/logos/social_media/logo_youtube.svg"
+            alt=""
+          />
+          <div class="slider-container" id="sliderYoutube">
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
           </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
+          <div class="social-slider-bg"></div>
+          <div class="social-slider-shadowbox"></div>
         </div>
-        <div class="tiktok-bg"></div>
-        <div class="tiktok-shadowbox"></div>
-      </div>
 
-      <div class="section-wrapper tiktok">
-        <img
-          onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
-          class="slider-social-logo"
-          src="./src/img/logos/social_media/logo_tiktok.svg"
-          alt=""
-        />
-        <div class="slider-container" id="sliderTiktok">
-          '
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
+        <div class="section-wrapper social-slider">
+          <img
+            onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
+            class="slider-social-logo"
+            src="./src/img/logos/social_media/logo_tiktok.svg"
+            alt=""
+          />
+          <div class="slider-container" id="sliderTiktok">
+            '
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
           </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
+          <div class="social-slider-bg"></div>
+          <div class="social-slider-shadowbox"></div>
         </div>
-        <div class="tiktok-bg"></div>
-        <div class="tiktok-shadowbox"></div>
-      </div>
 
-      <div class="section-wrapper tiktok">
-        <img
-          onclick="location.href = 'https://www.instagram.com/exoticluxuryreviews/';"
-          class="slider-social-logo"
-          src="./src/img/logos/social_media/logo_instagram.svg"
-          alt=""
-        />
-        <div class="slider-container" id="sliderInstagram">
-          '
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
+        <div class="section-wrapper social-slider">
+          <img
+            onclick="location.href = 'https://www.instagram.com/exoticluxuryreviews/';"
+            class="slider-social-logo"
+            src="./src/img/logos/social_media/logo_instagram.svg"
+            alt=""
+          />
+          <div class="slider-container" id="sliderInstagram">
+            '
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
+            <div class="slide">
+              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+              <img
+                class="social-video-thumb"
+                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+                alt="image description"
+              />
+            </div>
           </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
-          <div class="slide">
-            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-              alt="image description"
-            />
-          </div>
+          <div class="social-slider-bg"></div>
+          <div class="social-slider-shadowbox"></div>
         </div>
-        <div class="tiktok-bg"></div>
-        <div class="tiktok-shadowbox"></div>
       </div>
 
       <!-- 2nd and 3rd latest videos -->
-    </section>
-    <section>
-      <h1>Like To Read?</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, omnis?
-      </p>
     </section>
 
     <footer>
@@ -377,34 +371,43 @@
       </div>
       <div class="footer-right">
         <div class="footer-nav">
-          <h3 class="footer-text">Help</h3>
+          <h3 class="footer-text"><p>Help</p></h3>
           <div class="footer-links">
-            <a class="footer-text" href="./about">About Us</a>
-            <a class="footer-text" href="./faq">FAQ</a>
+            <!-- <a class="footer-text" href="./faq">FAQ</a> -->
             <a class="footer-text" href="./contact/">Contact Us</a>
           </div>
         </div>
         <div class="footer-nav">
-          <h3 class="footer-text">Legal Info</h3>
+          <h3 class="footer-text"><p>Legal Info</p></h3>
           <div class="footer-links">
             <a class="footer-text" href="./privacy/index.html"
               >Privacy Policy</a
             >
             <a class="footer-text" href="./tos/index.html">Terms of Service</a>
-            <a class="footer-text" href="./cookies/index.html">Cookie Policy</a>
+            <a class="footer-text" href="./cookie-policy/index.html"
+              >Cookie Policy</a
+            >
           </div>
         </div>
         <div class="footer-nav">
-          <h3 class="footer-text">Follow Us</h3>
+          <h3 class="footer-text"><p>Follow Us</p></h3>
           <div class="footer-links">
-            <a class="footer-text" href="">Facebook</a>
+            <a
+              class="footer-text"
+              href="https://www.tiktok.com/@exoticluxuryreviews"
+              >Tiktok</a
+            >
             <a
               class="footer-text"
               href="https://www.instagram.com/exoticluxuryreviews/"
               >Instagram</a
             >
-            <a class="footer-text" href="">Twitter</a>
-            <a class="footer-text" href="">Youtube</a>
+            <!-- <a class="footer-text" href="">Twitter</a> -->
+            <a
+              class="footer-text"
+              href="https://www.youtube.com/@exoticluxuryreviews/featured"
+              >Youtube</a
+            >
           </div>
         </div>
       </div>
