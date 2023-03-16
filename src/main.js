@@ -442,3 +442,17 @@ function closeMediaViewer() {
   ytEmbed.src = "";
   mediaViewer.style.display = "none";
 }
+
+// copy text to clipboard
+
+function copyToClipboard() {
+  let notifyCopy = document.querySelector(".clipboard-notification");
+
+  notifyCopy.classList.add("show");
+
+  setTimeout(function () {
+    notifyCopy.classList.remove("show");
+  }, 1000);
+
+  navigator.clipboard.writeText("support@exoticluxuryreviews.com");
+}

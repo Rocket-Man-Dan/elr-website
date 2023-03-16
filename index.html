@@ -71,8 +71,8 @@
           <a class="nav-btn" href="./charity/">
             <h3 style="--y: 1rem" class="btn-text">Our Charity Partners</h3>
           </a>
-          <a class="nav-btn" href="./social/">
-            <h3 style="--y: 0.75rem" class="btn-text">Follow Us</h3>
+          <a class="nav-btn" href="./blog/">
+            <h3 style="--y: 0.75rem" class="btn-text">Blog</h3>
           </a>
           <a class="nav-btn" href="./contact/">
             <h3 style="--y: 0rem" class="btn-text">Contact Us</h3>
@@ -127,6 +127,77 @@
         people.
       </p>
     </section>
+
+    <!-- popup giveaway -->
+
+    <input style="display: none" type="checkbox" id="popupClose" />
+    <input checked style="display: none" type="checkbox" id="popupCheckbox" />
+    <div class="popup-container">
+      <div class="popup-btn">
+        <label for="popupClose" class="close-popup"></label>
+        <label for="popupCheckbox" class="open-popup">Giveaways!</label>
+        <h2>Enter to Win a God of War Edition Playstation 5!</h2>
+        <a href="./giveaways/" class="giveaway-popup-btn">Enter Here</a>
+        <img
+          class="giveaway-img home"
+          src="./src/img/giveaway_items/giveaway_ps5_image.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <section class="social-contact-info">
+      <h2>Follow Us!</h2>
+      <div class="social-follow-container">
+        <div class="social-btn-container">
+          <img
+            src="./src/img/logos/social_media/logo_youtube_icon.svg"
+            alt=""
+            class="social-icon"
+          />
+          <button
+            onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
+            class="social-btn-follow"
+          >
+            Subscribe
+          </button>
+        </div>
+        <div class="social-btn-container">
+          <img
+            src="./src/img/logos/social_media/logo_tiktok_icon.svg"
+            alt=""
+            class="social-icon"
+          />
+          <button
+            onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
+            class="social-btn-follow"
+          >
+            Follow
+          </button>
+        </div>
+        <div class="social-btn-container">
+          <img
+            src="./src/img/logos/social_media/logo_instagram_icon.svg"
+            alt=""
+            class="social-icon"
+          />
+          <button
+            onclick="location.href = 'https://www.instagram.com/exoticluxuryreviews/';"
+            class="social-btn-follow"
+          >
+            Follow
+          </button>
+        </div>
+      </div>
+      <div class="email-contact-section">
+        <h2>Or Contact Us Directly!</h2>
+        <button onclick="copyToClipboard()" id="textEmail">
+          support@exoticluxuryreviews.com
+        </button>
+        <div class="clipboard-notification">Copied To ClipBoard!</div>
+      </div>
+    </section>
+
     <!-- videos section -->
     <div class="video-viewer">
       <div class="video-container">

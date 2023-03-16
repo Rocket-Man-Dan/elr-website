@@ -1,156 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exotic Luxury Reviews - Store</title>
-<link rel="icon" type="image/x-icon" href="../img/icons/favicon_ELR.svg">
-<link rel="stylesheet" href="../src/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
-      rel="stylesheet">
-</head>
-<body>
-  <!-- back to top button -->
-  <img class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-                            src="../src/img/nav_icons/icon_totop.svg" alt="">
-  <!-- header -->
-  <header id="header" class="header">
-    <input
-      type="checkbox"
-      id="mobile-nav"
-      style="display: none; position: fixed; z-index: 999"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exotic Luxury Reviews - Store</title>
+    <link rel="icon" type="image/x-icon" href="../img/icons/favicon_ELR.svg" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
     />
-    <div class="nav-wrapper">
-      <!-- logo home button -->
+  </head>
+  <body>
+    <!-- back to top button -->
+    <img
+      class="back-to-top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      src="../src/img/nav_icons/icon_totop.svg"
+      alt=""
+    />
+    <!-- header -->
+    <header id="header" class="header">
+      <input
+        type="checkbox"
+        id="mobile-nav"
+        style="display: none; position: fixed; z-index: 999"
+      />
+      <div class="nav-wrapper">
+        <!-- logo home button -->
 
-      <div class="btn-burger-container">
-        <label class="btn-burger" for="mobile-nav"></label>
-      </div>
-      <a class="nav-mobile" href="">
-        <img
-          src="../src/img/nav_icons/icon_mobile_menu_white.svg"
-          alt="open mobile menu"
-        />
-      </a>
+        <div class="btn-burger-container">
+          <label class="btn-burger" for="mobile-nav"></label>
+        </div>
+        <a class="nav-mobile" href="">
+          <img
+            src="../src/img/nav_icons/icon_mobile_menu_white.svg"
+            alt="open mobile menu"
+          />
+        </a>
 
-      <!-- nav for links -->
-      <nav class="links nav">
-        <div class="mobile-nav-hitbox"></div>
-        <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
-          <div class="nav-item-container">
-            <h3 style="--y: 0rem" class="btn-text">Shop</h3>
-            <img
-              class="nav-img nav-links"
-              src="../src/img/icons/icon_plus.svg"
-            />
+        <!-- nav for links -->
+        <nav class="links nav">
+          <div class="mobile-nav-hitbox"></div>
+          <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
+            <div class="nav-item-container">
+              <h3 style="--y: 0rem" class="btn-text">Shop</h3>
+              <img
+                class="nav-img nav-links"
+                src="../src/img/icons/icon_plus.svg"
+              />
+            </div>
+            <div class="nav-menu-expand" id="store-menu">
+              <a href="../store/" style="--y: 0rem" class="btn-text">On Sale</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Hats</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Hoodies</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text">Shirts</a>
+              <a href="../store/" style="--y: 0rem" class="btn-text"
+                >Air Fresheners</a
+              >
+              <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
+              <a href="store/" style="--y: 0rem" class="btn-text"
+                >Mystery Boxes</a
+              >
+            </div>
           </div>
-          <div class="nav-menu-expand" id="store-menu">
-            <a href="../store/" style="--y: 0rem" class="btn-text">On Sale</a>
-            <a href="../store/" style="--y: 0rem" class="btn-text">Hats</a>
-            <a href="../store/" style="--y: 0rem" class="btn-text">Hoodies</a>
-            <a href="../store/" style="--y: 0rem" class="btn-text">Shirts</a>
-            <a href="../store/" style="--y: 0rem" class="btn-text"
-              >Air Fresheners</a
-            >
-            <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
-            <a href="store/" style="--y: 0rem" class="btn-text"
-              >Mystery Boxes</a
-            >
+          <a class="nav-btn" href="../giveaways/">
+            <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
+          </a>
+          <a class="nav-btn" href="../charity/">
+            <h3 style="--y: 1rem" class="btn-text">Our Charity Partners</h3>
+          </a>
+          <a class="nav-btn" href="../social/">
+            <h3 style="--y: 0.75rem" class="btn-text">Follow Us</h3>
+          </a>
+          <a class="nav-btn" href="../contact/">
+            <h3 style="--y: 0rem" class="btn-text">Contact Us</h3>
+          </a>
+        </nav>
+        <nav class="home nav">
+          <a class="nav-btn" href="../"
+            ><img
+              class="nav-img"
+              onmouseover="src='../src/img/logos/logo_ELR_wordmark.svg'"
+              onmouseout="src='../src/img/logos/logo_ELR_wordmark_gradient.svg'"
+              src="../src/img/logos/logo_ELR_wordmark_gradient.svg"
+              alt="ELR logo"
+          /></a>
+        </nav>
+        <div onclick="location.href = '../cart/index.html';" class="cart-btn">
+          <img class="cart-icon" src="../src/img/icons/icon_cart.svg" alt="" />
+          <div id="cartAmount" class="cart-amount">0</div>
+        </div>
+      </div>
+      <!-- bevel effect for header -->
+      <div class="nav-wrapper-border"></div>
+    </header>
+    <!-- hero section -->
+
+    <section class="cart" id="cart">
+      <h1>Cart</h1>
+      <button onclick="location.href='../store/'" class="return-store">
+        Return To Store
+      </button>
+      <div class="cart-info-wrapper">
+        <div id="label" class="text-center"></div>
+      </div>
+
+      <div class="shopping-cart" id="shopping-cart"></div>
+    </section>
+
+    <footer>
+      <div class="footer-left">
+        <img src="../src/img/logos/logo_ELR_wordmark.svg" alt="" />
+        <p>
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Exotic Luxury Reviews
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-nav">
+          <h3 class="footer-text">Help</h3>
+          <div class="footer-links">
+            <a class="footer-text" href="../about">About Us</a>
+            <a class="footer-text" href="../faq">FAQ</a>
+            <a class="footer-text" href="../contact/">Contact Us</a>
           </div>
         </div>
-        <a class="nav-btn" href="../giveaways/">
-          <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
-        </a>
-        <a class="nav-btn" href="../charity/">
-          <h3 style="--y: 1rem" class="btn-text">Our Charity Partners</h3>
-        </a>
-        <a class="nav-btn" href="../social/">
-          <h3 style="--y: 0.75rem" class="btn-text">Follow Us</h3>
-        </a>
-        <a class="nav-btn" href="../contact/">
-          <h3 style="--y: 0rem" class="btn-text">Contact Us</h3>
-        </a>
-      </nav>
-      <nav class="home nav">
-        <a class="nav-btn" href="../"
-          ><img
-            class="nav-img"
-            onmouseover="src='../src/img/logos/logo_ELR_wordmark.svg'"
-            onmouseout="src='../src/img/logos/logo_ELR_wordmark_gradient.svg'"
-            src="../src/img/logos/logo_ELR_wordmark_gradient.svg"
-            alt="ELR logo"
-        /></a>
-      </nav>
-      <div onclick="location.href = '../cart/index.html';" class="cart-btn">
-        <img class="cart-icon" src="../src/img/icons/icon_cart.svg" alt="" />
-        <div id="cartAmount" class="cart-amount">0</div>
-      </div>
-    </div>
-    <!-- bevel effect for header -->
-    <div class="nav-wrapper-border"></div>
-  </header>
-  <!-- hero section -->
-
-  <section class="cart" id="cart">
-
-    <h1>Cart</h1>
-
-    <div class="cart-info-wrapper">
-
-      <div id="label" class="text-center"></div>
-
-    </div>
-
-
-    <div class="shopping-cart" id="shopping-cart">
-
-    </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <footer>
-    <div class="footer-left">
-      <img src="../src/img/logos/logo_ELR_wordmark.svg" alt="">
-      <p> Copyright &copy; <script>document.write(new Date().getFullYear())</script> Exotic Luxury Reviews</p>
-    </div>
-    <div class="footer-right">
-      <div class="footer-nav">
-        <h3 class="footer-text">Help</h3>
-        <div class="footer-links">
-          <a class="footer-text" href="../about">About Us</a>
-          <a class="footer-text" href="../faq">FAQ</a>
-          <a class="footer-text" href="../contact/">Contact Us</a>
+        <div class="footer-nav">
+          <h3 class="footer-text">Legal Info</h3>
+          <div class="footer-links">
+            <a class="footer-text" href="../privacy">Privacy Policy</a>
+            <a class="footer-text" href="../tos">Terms of Service</a>
+            <a class="footer-text" href="../cookies">Cookie Policy</a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h3 class="footer-text">Follow Us</h3>
+          <div class="footer-links">
+            <a class="footer-text" href="">Facebook</a>
+            <a
+              class="footer-text"
+              href="https://www.instagram.com/exoticluxuryreviews/"
+              >Instagram</a
+            >
+            <a class="footer-text" href="">Twitter</a>
+            <a class="footer-text" href="">Youtube</a>
+          </div>
         </div>
       </div>
-      <div class="footer-nav">
-        <h3 class="footer-text">Legal Info</h3>
-        <div class="footer-links">
-          <a class="footer-text" href="../privacy">Privacy Policy</a>
-          <a class="footer-text" href="../tos">Terms of Service</a>
-          <a class="footer-text" href="../cookies">Cookie Policy</a>
-        </div>
-      </div>
-      <div class="footer-nav">
-        <h3 class="footer-text" >Follow Us</h3>
-        <div class="footer-links">
-          <a class="footer-text" href="">Facebook</a>
-          <a class="footer-text" href="https://www.instagram.com/exoticluxuryreviews/">Instagram</a>
-          <a class="footer-text" href="">Twitter</a>
-          <a class="footer-text" href="">Youtube</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-<script src="../src/data.js?v=1"></script>
-<script src="../src/main.js?v=1"></script>
-<script src="../src/cart.js?v=1"></script>
+    </footer>
+  </body>
+  <script src="../src/data.js?v=1"></script>
+  <script src="../src/main.js?v=1"></script>
+  <script src="../src/cart.js?v=1"></script>
 </html>
