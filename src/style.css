@@ -2020,12 +2020,104 @@ section {
 
 /* ⋯⋯⋯ 5.8 Blog ⋯⋯⋯ */
 
+.blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 10rem 0 5rem 0;
+    height: fit-content;
+    /* padding-top: 30rem; */
+    position: relative;
+    background-image: linear-gradient(
+            45deg,
+            var(--color-main-purple-50),
+            var(--color-main-orange-50)
+        ),
+        url(./img/patterns/pattern_honeycomb.png);
+    background-size: 8rem;
+
+    /* outline: 0.25rem solid red; */
+}
+
+.blog h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.blog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.blog-post {
+    z-index: 1;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 90vw;
+
+    /* transform: scale(0.5); */
+    border-radius: var(--border-size-small);
+    background-color: var(--color-main-dark-75);
+    backdrop-filter: blur(5px);
+}
+
+.blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.blog-header h3:first-child {
+    text-align: left;
+    width: 75%;
+    font-size: 1.75rem;
+    font-weight: 500 !important;
+}
+.blog-header h3:last-child {
+    text-align: right;
+    width: 25%;
+    font-size: 1.1rem;
+    font-weight: 400 !important;
+}
+
+.blog-content {
+    width: 100%;
+    height: fit-content;
+}
+
+.blog-content p {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 300;
+    font-size: 1.25rem;
+    opacity: 80%;
+}
+
+.blog-image {
+    width: 100%;
+    padding: 1rem;
+}
+
 /* ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷ */
 /* ∷∷∷∷∷∷∷ 6.0 Footer ∷∷∷∷∷∷∷∷∷∷ */
 /* ∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷ */
 
 footer {
-    z-index: -100;
+    z-index: -1;
     display: flex;
     position: relative;
     flex-direction: column;
