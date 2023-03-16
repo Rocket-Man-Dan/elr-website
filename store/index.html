@@ -104,7 +104,200 @@
     </header>
     <!-- hero section -->
     <section class="store" id="store">
+      <div class="store-bg"></div>
       <h1>Store</h1>
+      <p>Merch Coming Soon!</p>
+      <label id="filter-btn-menu" class="store-filter-btn" for="filter-checkbox"
+        ><h2>Filter</h2></label
+      >
+
+      <input type="checkbox" id="filter-checkbox" style="display: none" />
+      <div class="store-filter">
+        <label class="filter-btn-close" for="filter-checkbox"></label>
+        <label id="btnApplyFilter" class="btn-set-filter" for="filter-checkbox"
+          >Apply Filters</label
+        >
+        <label id="btnClearFilter" class="btn-set-filter" for=""
+          >Clear Filters</label
+        >
+        <div class="filter-btn-group-container">
+          <div class="filter-btn-group">
+            <h2>Type</h2>
+            <div class="store-toggle-btn-container">
+              <div class="store-toggle-btn" id="typeHat" data-tag-type="hat">
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>Hats</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="typeHoodie"
+                data-tag-type="hoodie"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>Hoodies</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="typeShirt"
+                data-tag-type="shirt"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>Shirts</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div class="store-toggle-btn" id="typeTree" data-tag-type="tree">
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>Scent Trees</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="typeSticker"
+                data-tag-type="sticker"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>Stickers</h3>
+            </div>
+          </div>
+          <div class="filter-btn-group">
+            <h2>Logo</h2>
+            <div class="store-toggle-btn-container">
+              <div class="store-toggle-btn" id="logoELR" data-tag-logo="main">
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>ELR</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div class="store-toggle-btn" id="logoGTR" data-tag-logo="gtr">
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>GTR</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="logoMonogram"
+                data-tag-logo="monogram"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <h3>Monogram</h3>
+            </div>
+          </div>
+          <div class="filter-btn-group">
+            <h2>Graphic Color</h2>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="logoColorBlack"
+                data-tag-logo-col="black"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: black"></div>
+              <h3>Black</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="logoColorWhite"
+                data-tag-logo-col="white"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: white"></div>
+              <h3>White</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="logoColorPurple"
+                data-tag-logo-col="purple"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: #b000f2"></div>
+              <h3>Purple</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="logoColorOrange"
+                data-tag-logo-col="orange"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: #e35504"></div>
+              <h3>Orange</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="logoColorRed"
+                data-tag-logo-col="red"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: red"></div>
+              <h3>Red</h3>
+            </div>
+          </div>
+          <div class="filter-btn-group">
+            <h2>Material</h2>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="matColorBlack"
+                data-tag-mat-col="black"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: black"></div>
+              <h3>Black</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="matColorWhite"
+                data-tag-mat-col="white"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: white"></div>
+              <h3>White</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="matColorPurple"
+                data-tag-mat-col="purple"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: #b000f2"></div>
+              <h3>Purple</h3>
+            </div>
+            <div class="store-toggle-btn-container">
+              <div
+                class="store-toggle-btn"
+                id="matColorOrange"
+                data-tag-mat-col="orange"
+              >
+                <div class="btn-switch-icon"></div>
+              </div>
+              <div style="--t-color: #e35504"></div>
+              <h3>Orange</h3>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="store-wrapper" id="store-wrapper"></div>
     </section>
     <footer>

@@ -113,29 +113,52 @@
       />
       <div class="section-wrapper charity">
         <img
-          class="charity-logo"
-          src="../src/img/logos/charity/champstrong/logo_wordmark_champstrong_color.svg"
+          class="charity-logo desktop"
+          src="../src/img/logos/charity/champstrong/logo_champstrong_horizontal.svg"
           alt=""
         />
         <img
-          style="--z-index: -10; --width: 90%; --margin: 4rem 0"
-          class="photo"
-          src="../src/img/photos/charity/champstrong_photo_1.png"
+          class="charity-logo mobile"
+          src="../src/img/logos/charity/champstrong/logo_wordmark_champstrong_color.svg"
           alt=""
         />
-        <p>
-          We are a non-profit that supports, empowers, and raises funds for
-          amputees all around the world.
-          <br />
-          <br />
-          Locally, we conduct in-person visits to provide education for amputees
-          and their families. <br />
-        </p>
+        <div>
+          <img
+            style="
+              --z-index: -10;
+              --width-mob: 100%;
+              --width: 20%;
+              --margin: 4rem 0;
+              --margin-mob: 4rem 0;
+              --trans-x-mob: -30rem;
+              --trans-y-mob: 0;
+            "
+            class="photo"
+            src="../src/img/photos/charity/champstrong_photo_1.png"
+            alt=""
+          />
+          <div>
+            <p>
+              We are a non-profit that supports, empowers, and raises funds for
+              amputees all around the world.
+            </p>
+            <p>
+              Locally, we conduct in-person visits to provide education for
+              amputees and their families. <br />
+            </p>
+          </div>
+        </div>
+
         <div class="photo-quote">
           <h2>"Life is not over post-amputation."</h2>
 
           <img
-            style="--z-index: -10; --width: 80%; --margin: 4rem 0"
+            style="
+              --z-index: -10;
+              --width-mob: 80%;
+              --width: 40rem;
+              --margin: 4rem 0;
+            "
             class="photo"
             src="../src/img/photos/charity/champstrong_photo_3.png"
             alt=""
@@ -153,17 +176,26 @@
           people, and changing lives.
         </p>
         <h2>PLEASE GIVE A GIFT TODAY!!!</h2>
+        <span>champstrongonline@gmail.com</span>
         <button class="btn">DONATE</button>
       </div>
       <div class="divider"></div>
       <div class="section-wrapper charity about-charity">
         <h1>About Me</h1>
-        <img
-          style="--z-index: -10; --width: 80%; --margin: 10rem 0"
-          class="photo"
-          src="../src/img/photos/charity/champstrong_photo_2.png"
-          alt=""
-        />
+        <div class="about-photo">
+          <img
+            style="--z-index: -10; --width: 80%; --margin: 10rem 0"
+            class="photo"
+            src="../src/img/photos/charity/champstrong_photo_2.png"
+            alt=""
+          />
+          <img
+            style="--z-index: unset; --top: unset; --y: unset; --y-mob: unset"
+            src="../src/img/shapes/graphic_bg_shape_swoop_1.svg"
+            alt=""
+            class="shape"
+          />
+        </div>
         <p class="charity-about-me">
           Djibril Champ Kande is an incredibly inspiring individual who has
           overcome a great deal of challenges and adversity in his life. Despite
@@ -176,12 +208,6 @@
           a truly remarkable person and a positive force in his community and
           others.
         </p>
-        <img
-          style="--z-index: 10; --top: 0rem; --y: 0rem; --y-mob: 215rem"
-          src="../src/img/shapes/graphic_bg_shape_swoop_1.svg"
-          alt=""
-          class="shape"
-        />
       </div>
     </section>
     <footer>
