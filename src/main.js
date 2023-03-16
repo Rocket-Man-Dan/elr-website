@@ -142,7 +142,16 @@ setTimeout(function () {
   storeItems.forEach((item, i) => {
     btnApplyFilter.addEventListener("click", (e) => {
       item.remove();
-      generateStore();
+      if (
+        toggleType.length == 0 &&
+        toggleLogo.length == 0 &&
+        toggleLogoCol.length == 0 &&
+        toggleMaterial == 0
+      ) {
+        generateStoreAll();
+      } else {
+        generateStore();
+      }
 
       // run setgenerateshop stuff here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     });
@@ -417,8 +426,6 @@ if (
 }
 
 btnApplyFilter.addEventListener("click", (e) => {
-  generateStore();
-
   // run setgenerateshop stuff here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 });
 
