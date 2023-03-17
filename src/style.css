@@ -691,12 +691,6 @@ section {
     top: 0;
     bottom: 0;
     margin: auto 0 auto 0;
-
-    border-radius: 0 3rem 3rem 0;
-    backdrop-filter: blur(30px);
-    outline: 0.2rem solid var(--color-main-purple);
-    box-shadow: 0 0 2rem var(--color-main-purple);
-    background-color: var(--color-main-purple-50);
 }
 
 #popupCheckbox:checked ~ .popup-container {
@@ -712,12 +706,23 @@ section {
     font-size: 3rem;
     font-weight: 600;
     padding: 1rem 2rem 1rem 2rem;
-    outline: 0.2rem solid var(--color-main-orange);
+    outline: 0.2rem solid var(--color-main-purple);
     border-radius: var(--border-size-med) var(--border-size-med) 0 0;
-    background-color: var(--color-main-orange-50);
+    background-color: var(--color-main-dark-75);
     transform: translate(32.6rem, 22rem) rotate(90deg);
+    backdrop-filter: blur(15px);
+
     cursor: pointer;
     user-select: none;
+}
+
+.popup-btn {
+    border-radius: 0 3rem 3rem 0;
+
+    outline: 0.2rem solid var(--color-main-purple);
+    box-shadow: 0 0 2rem var(--color-main-purple);
+    background-color: var(--color-main-dark-75);
+    backdrop-filter: blur(15px);
 }
 
 .close-popup {
@@ -726,10 +731,10 @@ section {
     position: absolute;
     align-items: center;
     justify-content: center;
-    transform: translate(44rem, 12rem) rotate(90deg);
+    transform: translate(41.5rem, 8rem) rotate(90deg);
     width: 5rem;
     height: 5rem;
-    background-image: url(../src/img/icons/icon_x_outline.png);
+    background-image: url(../src/img/icons/icon_x.svg);
     background-size: 5rem;
     cursor: pointer;
 }
@@ -739,7 +744,7 @@ section {
 }
 
 .close-popup:hover {
-    transform: translate(44rem, 12rem) rotate(90deg) scale(1.1);
+    transform: translate(41.5rem, 8rem) rotate(90deg) scale(1.1);
     filter: drop-shadow(0 0 0.5rem var(--color-main-white));
 }
 
@@ -777,12 +782,12 @@ section {
     border-radius: var(--border-size-small);
     user-select: none;
     cursor: pointer;
-    background-color: var(--color-main-dark-50);
+    background-color: var(--color-main-purple-50);
 }
 
 .giveaway-popup-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 1rem var(--color-main-purple);
+    box-shadow: 0 0 1rem var(--color-main-white);
 }
 
 .popup-container .home {
@@ -798,11 +803,21 @@ section {
     .popup-container {
         transition: all ease-in-out 500ms;
         width: 30rem;
-        box-shadow: 0 0 2rem var(--color-main-purple);
     }
+
+    .popup-btn {
+        border-radius: 0 3rem 3rem 0;
+
+        outline: 0.2rem solid var(--color-main-purple);
+        box-shadow: 0 0 2rem var(--color-main-purple);
+        background-color: var(--color-main-dark-75);
+        backdrop-filter: blur(15px);
+    }
+
     .open-popup {
-        padding: 0.25rem 2rem 0rem 2rem;
-        transform: translate(21.75rem, 22rem) rotate(90deg);
+        padding: 0.25rem 2rem 0.5rem 2rem;
+        font-size: 1.9rem;
+        transform: translate(24rem, 22rem) rotate(90deg);
     }
 
     .popup-container .home {
@@ -811,7 +826,7 @@ section {
     }
 
     #popupCheckbox:checked ~ .popup-container {
-        transform: translateX(-30.75rem);
+        transform: translateX(-30rem);
         box-shadow: 0 0 0rem rgba(255, 255, 255, 0);
     }
 
@@ -821,16 +836,16 @@ section {
         position: absolute;
         align-items: center;
         justify-content: center;
-        transform: translate(33rem, 11rem) rotate(90deg);
-        width: 5rem;
-        height: 5rem;
-        background-image: url(../src/img/icons/icon_x_outline.png);
-        background-size: 5rem;
+        transform: translate(30.75rem, 11rem) rotate(90deg);
+        width: 3rem;
+        height: 3rem;
+        background-image: url(../src/img/icons/icon_x.svg);
+        background-size: 3rem;
         cursor: pointer;
     }
 
     .close-popup:hover {
-        transform: translate(33rem, 11rem) rotate(90deg) scale(1.1);
+        transform: translate(30.75rem, 11rem) rotate(90deg) scale(1.1);
         filter: drop-shadow(0 0 0.5rem var(--color-main-white));
     }
 

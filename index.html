@@ -133,9 +133,9 @@
     <input style="display: none" type="checkbox" id="popupClose" />
     <input checked style="display: none" type="checkbox" id="popupCheckbox" />
     <div class="popup-container">
+      <label for="popupClose" class="close-popup"></label>
+      <label for="popupCheckbox" class="open-popup">Giveaways!</label>
       <div class="popup-btn">
-        <label for="popupClose" class="close-popup"></label>
-        <label for="popupCheckbox" class="open-popup">Giveaways!</label>
         <h2>Enter to Win a God of War Edition Playstation 5!</h2>
         <a href="./giveaways/" class="giveaway-popup-btn">Enter Here</a>
         <img
@@ -199,7 +199,7 @@
     </section>
 
     <!-- videos section -->
-    <div class="video-viewer">
+    <div class="video-viewer" id="mediaViewer">
       <div class="video-container">
         <div class="yt-btn-container">
           <img
@@ -210,6 +210,7 @@
           />
         </div>
         <iframe
+          id="ytEmbed"
           class="yt-shorts-player"
           src="https://www.youtube.com/embed/RakZheijMZQ?&&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&mute=1"
           title="Phantom or Ghost? Which #RollsRoyce would you get?"
@@ -469,7 +470,7 @@
       </div>
     </footer>
   </body>
-  <script src="src/update_socials.js"></script>
   <script src="src/main.js?v=1"></script>
   <script src="src/swipe.js?v=1"></script>
+  <script src="src/update_socials.js"></script>
 </html>

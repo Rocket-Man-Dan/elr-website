@@ -179,7 +179,7 @@ let ytThumbs = Array.from(ytSlider.children);
 async function loadYT() {
   const response = await fetch("./api/yt_videos_info.json");
   const ytJson = await response.json();
-  console.log(ytJson);
+  // console.log(ytJson);
 
   let ytVideos = ytJson.items[0].shorts;
   let ytThumbIds = [];
@@ -199,11 +199,10 @@ loadYT();
 
 function openYtShortVideo() {
   console.log("clicked " + clickIndex);
+  console.log("clicked " + mediaViewer);
   mediaViewer.style.display = "block";
   ytEmbed.src =
     "https://www.youtube.com/embed/" +
     ytVidIDs[clickIndex] +
     "?&&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&mute=1";
 }
-
-mediaViewer.style.display = "none";
