@@ -2873,6 +2873,7 @@ footer {
     padding: 4rem 2rem;
     width: calc(90px * 4);
     height: calc(160px * 3);
+
     overflow: hidden;
 }
 .social-slider-shadowbox {

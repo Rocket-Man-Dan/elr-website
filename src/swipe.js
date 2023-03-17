@@ -1,7 +1,7 @@
 // get our elements
 const sliders = document.querySelectorAll(".slider-container");
 const indexArray = [];
-const containerWidth = document.querySelector(".section-wrapper").offsetWidth;
+const containerWidth = document.querySelector(".slider-container").offsetWidth;
 
 let ytVidIDs = [];
 let clickIndex = 0;
