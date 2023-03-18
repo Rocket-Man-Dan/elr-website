@@ -580,8 +580,27 @@ p {
     align-items: center;
     justify-content: center;
     position: absolute;
+    border-radius: var(--border-size-small);
     margin: 0vh auto;
-    width: 40vh;
+    width: 30rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.75);
+}
+
+.hero-title {
+    z-index: 1;
+    position: absolute;
+    top: 28rem;
+    font-size: 1.75rem;
+}
+
+.hero-social {
+    z-index: 1;
+    position: absolute;
+    top: 52rem;
+    width: 30rem !important;
+    padding: 1rem !important;
+    height: 5rem !important;
+    flex-basis: unset !important;
 }
 
 .hero-video {
@@ -611,6 +630,35 @@ p {
     .hero-video {
         height: unset;
         width: 100vw;
+    }
+
+    .hero-img {
+        z-index: 6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        border-radius: var(--border-size-med);
+        margin: 0vh auto;
+        width: 60rem;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.75);
+    }
+
+    .hero-title {
+        z-index: 1;
+        position: absolute;
+        top: 22rem;
+        font-size: 3rem;
+    }
+
+    .hero-social {
+        z-index: 1;
+        position: absolute;
+        top: 76rem;
+        width: 30rem !important;
+        padding: 1rem !important;
+        height: 10rem !important;
+        flex-basis: unset !important;
     }
 }
 
