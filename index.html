@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exotic Luxury Reviews</title>
     <link rel="icon" type="image/x-icon" href="src/img/icons/favicon_ELR.svg" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.css?id=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -98,25 +98,22 @@
     </header>
     <!-- hero section -->
     <section class="hero" id="hero">
-      <div class="social-btn-container hero-social">
-        <img
-          src="./src/img/logos/social_media/logo_youtube_icon.svg"
-          alt=""
-          class="social-icon"
-        />
-        <button
-          onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
-          class="social-btn-follow"
-        >
-          Subscribe
-        </button>
+      <div class="hero-ad-container">
+        <div class="hero-ad-info">
+          <h2>Your ad here</h2>
+          <h3>support@exoticluxuryreviews.com</h3>
+        </div>
       </div>
-      <h2 class="hero-title">Episode 1 drops Sunday at 6pm EST!</h2>
-      <img
-        class="hero-img"
-        src="src/img/yt_thumbnails/yt_thumb_episode_1_web.jpg"
-        alt=""
-      />
+      <div class="hero-content-container">
+        <h2 class="hero-title">Episode 1 drops Sunday at 6pm EST!</h2>
+        <img
+          onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured'"
+          class="hero-img"
+          src="src/img/yt_thumbnails/yt_thumb_episode_1_web.jpg"
+          alt=""
+        />
+      </div>
+
       <video
         playsinline
         autoplay
@@ -129,43 +126,6 @@
         Latest Videos
       </button>
     </section>
-    <section class="about">
-      <h1>About Us</h1>
-      <p>
-        Exotic Luxury Reviews is your #1 source for all things Exotic and
-        Luxury. ELR is a lifestyle brand as much as its a digital media and
-        marketing company. We offer unique advertising and marketing solutions
-        for automotive, real estate, and luxury brands.
-
-        <br /><br />
-      </p>
-      <p>
-        Our goal with ELR is to create and distribute the highest quality video
-        content. Thanks to our hand picked media team, we are capable of
-        providing our consumers with daily videos and articles.
-
-        <br /><br />
-        Whether you like to read, watch or listen. We've got you covered!
-      </p>
-    </section>
-
-    <!-- popup giveaway -->
-
-    <input style="display: none" type="checkbox" id="popupClose" />
-    <input checked style="display: none" type="checkbox" id="popupCheckbox" />
-    <div class="popup-container">
-      <label for="popupClose" class="close-popup"></label>
-      <label for="popupCheckbox" class="open-popup">Giveaways!</label>
-      <div class="popup-btn">
-        <h2>Enter to Win a God of War Edition Playstation 5!</h2>
-        <a href="./giveaways/" class="giveaway-popup-btn">Enter Here</a>
-        <img
-          class="giveaway-img home"
-          src="./src/img/giveaway_items/giveaway_ps5_image.png"
-          alt=""
-        />
-      </div>
-    </div>
 
     <section class="social-contact-info">
       <h2>Follow Us!</h2>
@@ -218,6 +178,44 @@
         <div class="clipboard-notification">Copied To ClipBoard!</div>
       </div>
     </section>
+
+    <section class="about">
+      <h1>About Us</h1>
+      <p>
+        Exotic Luxury Reviews is your #1 source for all things Exotic and
+        Luxury. ELR is a lifestyle brand as much as its a digital media and
+        marketing company. We offer unique advertising and marketing solutions
+        for automotive, real estate, and luxury brands.
+
+        <br /><br />
+      </p>
+      <p>
+        Our goal with ELR is to create and distribute the highest quality video
+        content. Thanks to our hand picked media team, we are capable of
+        providing our consumers with daily videos and articles.
+
+        <br /><br />
+        Whether you like to read, watch or listen. We've got you covered!
+      </p>
+    </section>
+
+    <!-- popup giveaway -->
+
+    <input style="display: none" type="checkbox" id="popupClose" />
+    <input checked style="display: none" type="checkbox" id="popupCheckbox" />
+    <div class="popup-container">
+      <label for="popupClose" class="close-popup"></label>
+      <label for="popupCheckbox" class="open-popup">Giveaways!</label>
+      <div class="popup-btn">
+        <h2>Enter to Win a God of War Edition Playstation 5!</h2>
+        <a href="./giveaways/" class="giveaway-popup-btn">Enter Here</a>
+        <img
+          class="giveaway-img home"
+          src="./src/img/giveaway_items/giveaway_ps5_image.png"
+          alt=""
+        />
+      </div>
+    </div>
 
     <!-- videos section -->
     <div class="video-viewer" id="mediaViewer">
