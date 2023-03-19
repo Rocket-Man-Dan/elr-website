@@ -655,6 +655,7 @@ p {
     z-index: 1;
     padding: 1rem 0;
     font-size: 4vw;
+    margin: 0 0 -8rem 0;
 }
 
 .hero-video {
@@ -829,18 +830,20 @@ section {
 /* giveaway popup */
 
 .popup-container {
-    z-index: 999;
+    z-index: 99;
     width: 40rem;
     height: 50rem;
     position: fixed;
-    left: 0;
+    right: 0rem;
+    left: unset;
     top: 0;
     bottom: 0;
     margin: auto 0 auto 0;
+    /* transform: translateX(41rem); */
 }
 
 #popupCheckbox:checked ~ .popup-container {
-    transform: translateX(-41rem);
+    transform: translateX(40rem);
 }
 
 .open-popup {
@@ -855,7 +858,7 @@ section {
     outline: 0.2rem solid var(--color-main-purple);
     border-radius: var(--border-size-med) var(--border-size-med) 0 0;
     background-color: var(--color-main-dark-75);
-    transform: translate(32.6rem, 22rem) rotate(90deg);
+    transform: translate(-14rem, 22rem) rotate(-90deg);
     backdrop-filter: blur(15px);
 
     cursor: pointer;
@@ -863,7 +866,7 @@ section {
 }
 
 .popup-btn {
-    border-radius: 0 3rem 3rem 0;
+    border-radius: 3rem 0rem 0rem 3rem;
 
     outline: 0.2rem solid var(--color-main-purple);
     box-shadow: 0 0 2rem var(--color-main-purple);
@@ -952,8 +955,7 @@ section {
     }
 
     .popup-btn {
-        border-radius: 0 3rem 3rem 0;
-
+        border-radius: 3rem 0rem 0rem 3rem;
         outline: 0.2rem solid var(--color-main-purple);
         box-shadow: 0 0 2rem var(--color-main-purple);
         background-color: var(--color-main-dark-75);
@@ -963,7 +965,7 @@ section {
     .open-popup {
         padding: 0.25rem 2rem 0.5rem 2rem;
         font-size: 1.9rem;
-        transform: translate(24rem, 22rem) rotate(90deg);
+        transform: translate(-9rem, 22rem) rotate(-90deg);
     }
 
     .popup-container .home {
@@ -972,7 +974,7 @@ section {
     }
 
     #popupCheckbox:checked ~ .popup-container {
-        transform: translateX(-30rem);
+        transform: translateX(30rem);
         box-shadow: 0 0 0rem rgba(255, 255, 255, 0);
     }
 
@@ -982,21 +984,21 @@ section {
         position: absolute;
         align-items: center;
         justify-content: center;
-        transform: translate(30.75rem, 11rem) rotate(90deg);
-        width: 3rem;
-        height: 3rem;
+        transform: translate(-2.8rem, 12.5rem) rotate(-90deg);
+        width: 2.5rem;
+        height: 2.5rem;
         background-image: url(../src/img/icons/icon_x.svg);
-        background-size: 3rem;
+        background-size: 2.5rem;
         cursor: pointer;
     }
 
     .close-popup:hover {
-        transform: translate(30.75rem, 11rem) rotate(90deg) scale(1.1);
+        transform: translate(0rem, 11rem) rotate(-90deg) scale(1.1);
         filter: drop-shadow(0 0 0.5rem var(--color-main-white));
     }
 
     #popupClose:checked ~ .popup-container {
-        transform: translateX(-49rem);
+        transform: translateX(49rem);
     }
 }
 
