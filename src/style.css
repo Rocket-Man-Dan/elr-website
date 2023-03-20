@@ -676,7 +676,7 @@ p {
 
     top: 0;
     opacity: 30%;
-    filter: blur(8px);
+    filter: blur(15px);
 }
 
 .recent-uploads {
@@ -3122,7 +3122,7 @@ footer {
     font-size: 2rem;
     outline: 0.2rem solid var(--color-main-purple);
     background-color: var(--color-main-purple-50);
-    transform: translateY(13rem);
+    transform: translateY(14rem);
 }
 
 .merch-slider-btn:hover {
@@ -3138,6 +3138,27 @@ footer {
         height: calc(160px * 4);
 
         overflow: hidden;
+    }
+
+    .section-wrapper.social-slider.merch h2 {
+        position: absolute;
+        font-size: 2.5rem;
+        transform: translateY(-20rem);
+    }
+
+    .merch-slider-btn {
+        text-decoration: none;
+
+        padding: 1rem 2rem;
+        border-radius: var(--border-size-small);
+        font-size: 2rem;
+        outline: 0.2rem solid var(--color-main-purple);
+        background-color: var(--color-main-purple-50);
+        transform: translateY(18rem);
+    }
+
+    .merch-slider-btn:hover {
+        transform: translateY(18rem) scale(1.1);
     }
 }
 
