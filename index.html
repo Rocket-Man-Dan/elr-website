@@ -69,7 +69,7 @@
             <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
           </a>
           <a class="nav-btn" href="./charity/">
-            <h3 style="--y: 1rem" class="btn-text">Our Charity Partners</h3>
+            <h3 style="--y: 1rem" class="btn-text">Charity Partner</h3>
           </a>
           <a class="nav-btn" href="./blog/">
             <h3 style="--y: 0.75rem" class="btn-text">Blog</h3>
@@ -98,6 +98,7 @@
     </header>
     <!-- hero section -->
     <section class="hero" id="hero">
+      <div class="hero-cover"></div>
       <div class="hero-ad-container">
         <div class="hero-ad-info">
           <h2>Your ad here</h2>
@@ -105,13 +106,17 @@
         </div>
       </div>
       <div class="hero-content-container">
-        <h2 class="hero-title">Episode 1 drops Sunday at 6pm EST!</h2>
-        <img
-          onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured'"
-          class="hero-img"
-          src="src/img/yt_thumbnails/yt_thumb_episode_1_web.jpg"
-          alt=""
-        />
+        <!-- <h2 class="hero-title">Episode 1 drops Sunday at 6pm EST!</h2> -->
+        <div class="hero-video-container">
+          <iframe
+            class="hero-img"
+            src="https://www.youtube.com/embed/q__HXB16vHk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
 
       <video
@@ -122,60 +127,59 @@
         class="hero-video"
         src="src/video/video4994974728193049495.mp4"
       ></video>
+
       <button onclick="scrollToVideos()" class="recent-uploads btn" btn>
         Latest Videos
       </button>
     </section>
-
-    <section class="social-contact-info">
-      <h2>Follow Us!</h2>
-      <div class="social-follow-container">
-        <div class="social-btn-container">
-          <img
-            src="./src/img/logos/social_media/logo_youtube_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-          <button
-            onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
-            class="social-btn-follow"
-          >
-            Subscribe
-          </button>
+    <section class="section-merch">
+      <div class="section-wrapper social-slider merch">
+        <h2>Merch Coming Soon!</h2>
+        <div class="slider-container merch">
+          <div class="slide merch">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="./src/img/merch/hats/merch_snapback_black_elr_gtr_white_red.png"
+              alt="image description"
+            />
+          </div>
+          <div class="slide merch">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="./src/img/merch/hoodies/merch_hoodie_purple_elr_main_color.png"
+              alt="image description"
+            />
+          </div>
+          <div class="slide merch">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="./src/img/merch/shirts/merch_tshirt_white_elr_gtr_black_purple.png"
+              alt="image description"
+            />
+          </div>
+          <div class="slide merch">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="./src/img/merch/trees/merch_scenttree_black_elr_monogram_color.png"
+              alt="image description"
+            />
+          </div>
+          <div class="slide merch">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img
+              class="social-video-thumb"
+              src="./src/img/merch/stickers/merch_sticker_white_elr_gtr_black_orange_holo.png"
+              alt="image description"
+            />
+          </div>
         </div>
-        <div class="social-btn-container">
-          <img
-            src="./src/img/logos/social_media/logo_tiktok_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-          <button
-            onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
-            class="social-btn-follow"
-          >
-            Follow
-          </button>
-        </div>
-        <div class="social-btn-container">
-          <img
-            src="./src/img/logos/social_media/logo_instagram_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-          <button
-            onclick="location.href = 'https://www.instagram.com/exoticluxuryreviews/';"
-            class="social-btn-follow"
-          >
-            Follow
-          </button>
-        </div>
-      </div>
-      <div class="email-contact-section">
-        <h2>Or Contact Us Directly!</h2>
-        <button onclick="copyToClipboard()" id="textEmail">
-          support@exoticluxuryreviews.com
-        </button>
-        <div class="clipboard-notification">Copied To ClipBoard!</div>
+        <a class="merch-slider-btn" href="./store/">See More Merch Here</a>
+        <div class="social-slider-bg"></div>
+        <div class="social-slider-shadowbox"></div>
       </div>
     </section>
 
@@ -202,7 +206,7 @@
     <!-- popup giveaway -->
 
     <input style="display: none" type="checkbox" id="popupClose" />
-    <input checked style="display: none" type="checkbox" id="popupCheckbox" />
+    <input style="display: none" type="checkbox" id="popupCheckbox" />
     <div class="popup-container">
       <label for="popupClose" class="close-popup"></label>
       <label for="popupCheckbox" class="open-popup">Giveaways!</label>
@@ -242,7 +246,7 @@
       <div></div>
     </div>
     <section class="videos" id="videos">
-      <h1>Like To Watch?</h1>
+      <h1>Featured Shorts</h1>
       <div class="section-wrapper">
         <div class="section-wrapper social-slider">
           <img
@@ -433,6 +437,14 @@
         </div> -->
       </div>
     </section>
+
+    <div class="email-contact-section">
+      <h2>Contact Us Directly!</h2>
+      <button onclick="copyToClipboard()" id="textEmail">
+        support@exoticluxuryreviews.com
+      </button>
+      <div class="clipboard-notification">Copied To ClipBoard!</div>
+    </div>
 
     <footer>
       <div class="footer-left">

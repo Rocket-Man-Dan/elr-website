@@ -46,7 +46,9 @@ sliders.forEach((slider, i) => {
     slide.addEventListener("mousemove", touchMove);
     slide.addEventListener("mouseleave", touchEnd);
 
-    slideImage.addEventListener("click", openYtShortVideo);
+    if (!slide.classList.contains("merch")) {
+      slideImage.addEventListener("click", openYtShortVideo);
+    }
   });
 
   // make responsive to viewport changes
@@ -197,9 +199,10 @@ async function loadYT() {
 }
 loadYT();
 
-function openYtShortVideo() {
+function openYtShortVideo(slide) {
   console.log("clicked " + clickIndex);
   console.log("clicked " + mediaViewer);
+
   mediaViewer.style.display = "block";
   ytEmbed.src =
     "https://www.youtube.com/embed/" +

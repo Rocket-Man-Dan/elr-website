@@ -10,6 +10,7 @@ window.addEventListener("scroll", function () {
   //HTML Elements
   const nav = document.querySelector(".nav-wrapper");
   const toTop = this.document.querySelector(".back-to-top");
+  const popup = this.document.querySelector(".popup-container");
   const cartBtn = this.document.querySelector(".cart-btn");
   let checkbox = document.getElementById("mobile-nav");
 
@@ -20,8 +21,10 @@ window.addEventListener("scroll", function () {
 
   if (window.pageYOffset > toTopPos) {
     toTop.classList.add("scroll");
+    popup.classList.add("scroll");
   } else if (window.pageYOffset < toTopPos) {
     toTop.classList.remove("scroll");
+    popup.classList.remove("scroll");
   }
 
   oldScrollPos = curScrollPos;
