@@ -1031,7 +1031,7 @@ section {
     }
 
     #popupClose:checked ~ .popup-container {
-        transform: translateY(0rem);
+        transform: translateY(60rem);
     }
 }
 
@@ -2338,7 +2338,7 @@ section {
 
         padding: 0;
 
-        margin-bottom: 4rem;
+        padding-bottom: 4rem;
     }
 
     .social-follow-container {
@@ -2360,12 +2360,12 @@ section {
         margin: 1rem;
         padding: 1rem;
         border: none;
-        background-color: var(--color-main-white);
+
         border-radius: var(--border-size-xsmall);
     }
 
     .social-btn-container img {
-        width: 20%;
+        width: 40%;
         transform: scale(0.8);
     }
 
