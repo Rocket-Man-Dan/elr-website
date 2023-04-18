@@ -1,7 +1,8 @@
 // get our elements
 const sliders = document.querySelectorAll(".slider-container");
 const indexArray = [];
-const containerWidth = document.querySelector(".slider-container").offsetWidth;
+const containerWidth = document.querySelector(".social-slider").offsetWidth;
+console.log("conatiner width " + containerWidth);
 
 let ytVidIDs = [];
 let clickIndex = 0;
@@ -26,6 +27,7 @@ sliders.forEach((slider, i) => {
   // add our event listeners
   slides.forEach((slide, index) => {
     const slideImage = slide.querySelector("img");
+
     setNextPrevCards();
 
     // disable default image drag
@@ -113,6 +115,7 @@ sliders.forEach((slider, i) => {
 
   function setPositionByIndex() {
     currentTranslate[i] = indexArray[i] * -containerWidth;
+
     prevTranslate[i] = currentTranslate[i];
     setSliderPosition();
   }

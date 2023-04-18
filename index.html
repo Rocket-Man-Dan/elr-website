@@ -1,393 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exotic Luxury Reviews</title>
-    <link rel="icon" type="image/x-icon" href="src/img/icons/favicon_ELR.svg" />
-    <link rel="stylesheet" href="src/style.css?id=6" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- back to top button -->
-    <img
-      class="back-to-top"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      src="./src/img/nav_icons/icon_totop.svg"
-      alt=""
-    />
-    <!-- header -->
-    <header id="header" class="header">
-      <input
-        type="checkbox"
-        id="mobile-nav"
-        style="display: none; position: fixed; z-index: 999"
-      />
-      <div class="nav-wrapper">
-        <!-- logo home button -->
 
-        <div class="btn-burger-container">
-          <label class="btn-burger" for="mobile-nav"></label>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exotic Luxury Reviews</title>
+  <link rel="icon" type="image/x-icon" href="src/img/icons/favicon_ELR.svg" />
+  <link rel="stylesheet" href="src/style.css?id=6" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- back to top button -->
+  <img class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    src="./src/img/nav_icons/icon_totop.svg" alt="" />
+  <!-- header -->
+  <header id="header" class="header">
+    <input type="checkbox" id="mobile-nav" style="display: none; position: fixed; z-index: 999" />
+    <div class="nav-wrapper">
+      <!-- logo home button -->
+
+      <div class="btn-burger-container">
+        <label class="btn-burger" for="mobile-nav"></label>
+      </div>
+      <a class="nav-mobile" href="">
+        <img src="./src/img/nav_icons/icon_mobile_menu_white.svg" alt="open mobile menu" />
+      </a>
+
+      <!-- nav for links -->
+      <nav class="links nav">
+        <input type="checkbox" id="shop-dropdown" style="display: none" />
+        <div class="mobile-nav-hitbox"></div>
+        <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
+          <label for="shop-dropdown" class="nav-item-container">
+            <h3 style="--y: 0rem" class="btn-text">Shop</h3>
+            <div class="nav-img nav-links"></div>
+          </label>
+          <div class="nav-menu-expand" id="store-menu">
+            <a href="./store/" style="--y: 0rem" class="btn-text">On Sale</a>
+            <a href="./store/" style="--y: 0rem" class="btn-text">Hats</a>
+            <a href="./store/" style="--y: 0rem" class="btn-text">Hoodies</a>
+            <a href="./store/" style="--y: 0rem" class="btn-text">Shirts</a>
+            <a href="./store/" style="--y: 0rem" class="btn-text">Air Fresheners</a>
+            <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
+            <a href="store/" style="--y: 0rem" class="btn-text">Mystery Boxes</a>
+          </div>
         </div>
-        <a class="nav-mobile" href="">
-          <img
-            src="./src/img/nav_icons/icon_mobile_menu_white.svg"
-            alt="open mobile menu"
-          />
+        <a class="nav-btn" href="./giveaways/">
+          <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
         </a>
+        <a class="nav-btn" href="./charity/">
+          <h3 style="--y: 1rem" class="btn-text">Charity Partner</h3>
+        </a>
+        <a class="nav-btn" href="./blog/">
+          <h3 style="--y: 0.75rem" class="btn-text">Blog</h3>
+        </a>
+        <a class="nav-btn" href="./team/">
+          <h3 style="--y: 0.75rem" class="btn-text">Team</h3>
+        </a>
+      </nav>
+      <nav class="home nav">
+        <a class="nav-btn" href="./"><img class="nav-img" onmouseover="src='./src/img/logos/logo_ELR_wordmark.svg'"
+            onmouseout="src='./src/img/logos/logo_ELR_wordmark_gradient.svg'"
+            src="./src/img/logos/logo_ELR_wordmark_gradient.svg" alt="ELR logo" /></a>
+      </nav>
+      <div onclick="location.href = './cart/index.html';" class="cart-btn">
+        <img class="cart-icon" src="./src/img/icons/icon_cart.svg" alt="" />
+        <div id="cartAmount" class="cart-amount">0</div>
+      </div>
+    </div>
+    <!-- bevel effect for header -->
+    <div class="nav-wrapper-border"></div>
+  </header>
+  <!-- hero section -->
+  <section class="hero" id="hero">
+    <div class="hero-cover"></div>
+    <div class="hero-ad-container">
+      <div class="hero-ad-info">
+        <h2>Your ad here</h2>
+        <h3>support@exoticluxuryreviews.com</h3>
+      </div>
+    </div>
+    <div class="hero-content-container">
+      <!-- <h2 class="hero-title">Episode 1 drops Sunday at 6pm EST!</h2> -->
+      <div class="hero-video-container">
+        <iframe class="hero-img" src="https://www.youtube.com/embed/q__HXB16vHk" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
 
-        <!-- nav for links -->
-        <nav class="links nav">
-          <input type="checkbox" id="shop-dropdown" style="display: none" />
-          <div class="mobile-nav-hitbox"></div>
-          <div class="nav-btn" id="nav-store" onclick="expandMenuItems()">
-            <label for="shop-dropdown" class="nav-item-container">
-              <h3 style="--y: 0rem" class="btn-text">Shop</h3>
-              <div class="nav-img nav-links"></div>
-            </label>
-            <div class="nav-menu-expand" id="store-menu">
-              <a href="./store/" style="--y: 0rem" class="btn-text">On Sale</a>
-              <a href="./store/" style="--y: 0rem" class="btn-text">Hats</a>
-              <a href="./store/" style="--y: 0rem" class="btn-text">Hoodies</a>
-              <a href="./store/" style="--y: 0rem" class="btn-text">Shirts</a>
-              <a href="./store/" style="--y: 0rem" class="btn-text"
-                >Air Fresheners</a
-              >
-              <a href="store/" style="--y: 0rem" class="btn-text">Stickers</a>
-              <a href="store/" style="--y: 0rem" class="btn-text"
-                >Mystery Boxes</a
-              >
-            </div>
-          </div>
-          <a class="nav-btn" href="./giveaways/">
-            <h3 style="--y: 0rem" class="btn-text">Giveaways</h3>
-          </a>
-          <a class="nav-btn" href="./charity/">
-            <h3 style="--y: 1rem" class="btn-text">Charity Partner</h3>
-          </a>
-          <a class="nav-btn" href="./blog/">
-            <h3 style="--y: 0.75rem" class="btn-text">Blog</h3>
-          </a>
-          <a class="nav-btn" href="./team/">
-            <h3 style="--y: 0.75rem" class="btn-text">Team</h3>
-          </a>
-        </nav>
-        <nav class="home nav">
-          <a class="nav-btn" href="./"
-            ><img
-              class="nav-img"
-              onmouseover="src='./src/img/logos/logo_ELR_wordmark.svg'"
-              onmouseout="src='./src/img/logos/logo_ELR_wordmark_gradient.svg'"
-              src="./src/img/logos/logo_ELR_wordmark_gradient.svg"
-              alt="ELR logo"
-          /></a>
-        </nav>
-        <div onclick="location.href = './cart/index.html';" class="cart-btn">
-          <img class="cart-icon" src="./src/img/icons/icon_cart.svg" alt="" />
-          <div id="cartAmount" class="cart-amount">0</div>
+    <video playsinline autoplay muted loop class="hero-video" src="src/video/Pexels-Taryn-Elliott.mp4"></video>
+
+    <button onclick="scrollToVideos()" class="recent-uploads btn" btn>
+      Latest Videos
+    </button>
+  </section>
+
+  <section class="social-contact-info">
+    <h2>Follow Us!</h2>
+    <div class="social-follow-container">
+      <div class="social-btn-container">
+        <img onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
+          src="./src/img/logos/social_media/logo_youtube_icon.svg" alt="" class="social-icon" />
+      </div>
+      <div class="social-btn-container">
+        <img onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
+          src="./src/img/logos/social_media/logo_tiktok_icon.svg" alt="" class="social-icon" />
+      </div>
+      <div class="social-btn-container">
+        <img onclick="location.href = 'https://www.instagram.com/exoticluxuryreviews/';"
+          src="./src/img/logos/social_media/logo_instagram_icon.svg" alt="" class="social-icon" />
+      </div>
+      <div class="social-btn-container">
+        <img onclick="location.href = 'https://twitter.com/ELRshawn';"
+          src="./src/img/logos/social_media/logo_twitter_icon.svg" alt="" class="social-icon" />
+      </div>
+      <div class="social-btn-container">
+        <img onclick="location.href = 'https://www.facebook.com/groups/687603026138608/';"
+          src="./src/img/logos/social_media/logo_facebook_icon.svg" alt="" class="social-icon" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-merch">
+    <h2>Merch Coming Soon!</h2>
+    <div class="section-wrapper social-slider merch">
+      <div class="slider-container merch">
+        <div class="slide merch">
+          <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+          <img class="social-video-thumb" src="./src/img/merch/hats/merch_snapback_black_elr_gtr_white_red.png"
+            alt="image description" />
+        </div>
+        <div class="slide merch">
+          <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+          <img class="social-video-thumb" src="./src/img/merch/hoodies/merch_hoodie_purple_elr_main_color.png"
+            alt="image description" />
+        </div>
+        <div class="slide merch">
+          <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+          <img class="social-video-thumb" src="./src/img/merch/shirts/merch_tshirt_white_elr_gtr_black_purple.png"
+            alt="image description" />
+        </div>
+        <div class="slide merch">
+          <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+          <img class="social-video-thumb" src="./src/img/merch/trees/merch_scenttree_black_elr_monogram_color.png"
+            alt="image description" />
+        </div>
+        <div class="slide merch">
+          <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+          <img class="social-video-thumb"
+            src="./src/img/merch/stickers/merch_sticker_white_elr_gtr_black_orange_holo.png" alt="image description" />
         </div>
       </div>
-      <!-- bevel effect for header -->
-      <div class="nav-wrapper-border"></div>
-    </header>
-    <!-- hero section -->
-    <section class="hero" id="hero">
-      <div class="hero-cover"></div>
-      <div class="hero-ad-container">
-        <div class="hero-ad-info">
-          <h2>Your ad here</h2>
-          <h3>support@exoticluxuryreviews.com</h3>
-        </div>
+
+      <div class="social-slider-bg"></div>
+      <div class="social-slider-shadowbox"></div>
+    </div>
+    <a class="merch-slider-btn" href="./store/">See More Merch Here</a>
+  </section>
+
+  <section class="about">
+    <h1>About Us</h1>
+    <p>
+      Exotic Luxury Reviews is your #1 source for all things Exotic and
+      Luxury. ELR is a lifestyle brand as much as its a digital media and
+      marketing company. We offer unique advertising and marketing solutions
+      for automotive, real estate, and luxury brands.
+
+      <br /><br />
+    </p>
+    <p>
+      Our goal with ELR is to create and distribute the highest quality video
+      content. Thanks to our hand picked media team, we are capable of
+      providing our consumers with daily videos and articles.
+
+      <br /><br />
+      Whether you like to read, watch or listen. We've got you covered!
+    </p>
+  </section>
+
+  <!-- popup giveaway -->
+
+  <input style="display: none" type="checkbox" id="popupClose" />
+  <input style="display: none" type="checkbox" id="popupCheckbox" />
+  <div class="popup-container">
+    <label for="popupClose" class="close-popup"></label>
+    <label for="popupCheckbox" class="open-popup">Giveaways!</label>
+    <div class="popup-btn">
+      <h2>Enter to Win a God of War Edition Playstation 5!</h2>
+      <a href="./giveaways/" class="giveaway-popup-btn">Enter Here</a>
+      <img class="giveaway-img home" src="./src/img/giveaway_items/giveaway_ps5_image.png" alt="" />
+    </div>
+  </div>
+
+  <!-- videos section -->
+  <div class="video-viewer" id="mediaViewer">
+    <div class="video-container">
+      <div class="yt-btn-container">
+        <img onclick="closeMediaViewer();" class="close-media-player" src="./src/img/icons/icon_x.svg" alt="" />
       </div>
-      <div class="hero-content-container">
-        <!-- <h2 class="hero-title">Episode 1 drops Sunday at 6pm EST!</h2> -->
-        <div class="hero-video-container">
-          <iframe
-            class="hero-img"
-            src="https://www.youtube.com/embed/q__HXB16vHk"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-
-      <video
-        playsinline
-        autoplay
-        muted
-        loop
-        class="hero-video"
-        src="src/video/Pexels-Taryn-Elliott.mp4"
-      ></video>
-
-      <button onclick="scrollToVideos()" class="recent-uploads btn" btn>
-        Latest Videos
-      </button>
-    </section>
-
-    <section class="social-contact-info">
-      <h2>Follow Us!</h2>
-      <div class="social-follow-container">
-        <div class="social-btn-container">
-          <img
-            onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
-            src="./src/img/logos/social_media/logo_youtube_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-        </div>
-        <div class="social-btn-container">
-          <img
-            onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
-            src="./src/img/logos/social_media/logo_tiktok_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-        </div>
-        <div class="social-btn-container">
-          <img
-            onclick="location.href = 'https://www.instagram.com/exoticluxuryreviews/';"
-            src="./src/img/logos/social_media/logo_instagram_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-        </div>
-        <div class="social-btn-container">
-          <img
-            onclick="location.href = 'https://twitter.com/ELRshawn';"
-            src="./src/img/logos/social_media/logo_twitter_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-        </div>
-        <div class="social-btn-container">
-          <img
-            onclick="location.href = 'https://www.facebook.com/groups/687603026138608/';"
-            src="./src/img/logos/social_media/logo_facebook_icon.svg"
-            alt=""
-            class="social-icon"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section class="section-merch">
-      <div class="section-wrapper social-slider merch">
-        <h2>Merch Coming Soon!</h2>
-        <div class="slider-container merch">
-          <div class="slide merch">
+      <iframe id="ytEmbed" class="yt-shorts-player"
+        src="https://www.youtube.com/embed/RakZheijMZQ?&&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&mute=1"
+        title="Phantom or Ghost? Which #RollsRoyce would you get?" frameborder="0" allow="autoplay;"
+        allowfullscreen></iframe>
+      <div></div>
+    </div>
+    <div></div>
+  </div>
+  <section class="videos" id="videos">
+    <h1>Featured Shorts</h1>
+    <div class="section-wrapper">
+      <div class="section-wrapper social-slider">
+        <img onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
+          class="slider-social-logo" src="./src/img/logos/social_media/logo_youtube.svg" alt="" />
+        <div class="slider-container" id="sliderYoutube">
+          <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="./src/img/merch/hats/merch_snapback_black_elr_gtr_white_red.png"
-              alt="image description"
-            />
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
           </div>
-          <div class="slide merch">
+          <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="./src/img/merch/hoodies/merch_hoodie_purple_elr_main_color.png"
-              alt="image description"
-            />
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
           </div>
-          <div class="slide merch">
+          <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="./src/img/merch/shirts/merch_tshirt_white_elr_gtr_black_purple.png"
-              alt="image description"
-            />
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
           </div>
-          <div class="slide merch">
+          <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="./src/img/merch/trees/merch_scenttree_black_elr_monogram_color.png"
-              alt="image description"
-            />
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
           </div>
-          <div class="slide merch">
+          <div class="slide">
             <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-            <img
-              class="social-video-thumb"
-              src="./src/img/merch/stickers/merch_sticker_white_elr_gtr_black_orange_holo.png"
-              alt="image description"
-            />
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
+          </div>
+          <div class="slide">
+            <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
+            <img class="social-video-thumb"
+              src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
+              alt="image description" />
           </div>
         </div>
-        <a class="merch-slider-btn" href="./store/">See More Merch Here</a>
         <div class="social-slider-bg"></div>
         <div class="social-slider-shadowbox"></div>
       </div>
-    </section>
-
-    <section class="about">
-      <h1>About Us</h1>
-      <p>
-        Exotic Luxury Reviews is your #1 source for all things Exotic and
-        Luxury. ELR is a lifestyle brand as much as its a digital media and
-        marketing company. We offer unique advertising and marketing solutions
-        for automotive, real estate, and luxury brands.
-
-        <br /><br />
-      </p>
-      <p>
-        Our goal with ELR is to create and distribute the highest quality video
-        content. Thanks to our hand picked media team, we are capable of
-        providing our consumers with daily videos and articles.
-
-        <br /><br />
-        Whether you like to read, watch or listen. We've got you covered!
-      </p>
-    </section>
-
-    <!-- popup giveaway -->
-
-    <input style="display: none" type="checkbox" id="popupClose" />
-    <input style="display: none" type="checkbox" id="popupCheckbox" />
-    <div class="popup-container">
-      <label for="popupClose" class="close-popup"></label>
-      <label for="popupCheckbox" class="open-popup">Giveaways!</label>
-      <div class="popup-btn">
-        <h2>Enter to Win a God of War Edition Playstation 5!</h2>
-        <a href="./giveaways/" class="giveaway-popup-btn">Enter Here</a>
-        <img
-          class="giveaway-img home"
-          src="./src/img/giveaway_items/giveaway_ps5_image.png"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <!-- videos section -->
-    <div class="video-viewer" id="mediaViewer">
-      <div class="video-container">
-        <div class="yt-btn-container">
-          <img
-            onclick="closeMediaViewer();"
-            class="close-media-player"
-            src="./src/img/icons/icon_x.svg"
-            alt=""
-          />
-        </div>
-        <iframe
-          id="ytEmbed"
-          class="yt-shorts-player"
-          src="https://www.youtube.com/embed/RakZheijMZQ?&&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&mute=1"
-          title="Phantom or Ghost? Which #RollsRoyce would you get?"
-          frameborder="0"
-          allow="autoplay;"
-          allowfullscreen
-        ></iframe>
-        <div></div>
-      </div>
-      <div></div>
-    </div>
-    <section class="videos" id="videos">
-      <h1>Featured Shorts</h1>
-      <div class="section-wrapper">
-        <div class="section-wrapper social-slider">
-          <img
-            onclick="location.href = 'https://www.youtube.com/@exoticluxuryreviews/featured';"
-            class="slider-social-logo"
-            src="./src/img/logos/social_media/logo_youtube.svg"
-            alt=""
-          />
-          <div class="slider-container" id="sliderYoutube">
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-            <div class="slide">
-              <!-- <img class="btn-play" src="./src/img/icons/icon_next.svg" alt="" /> -->
-              <img
-                class="social-video-thumb"
-                src="https://i.ytimg.com/vi/bi25Y5ZXpB4/hq720.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLDOq5W0r2rtYerlw6lLaUuARwmp0g"
-                alt="image description"
-              />
-            </div>
-          </div>
-          <div class="social-slider-bg"></div>
-          <div class="social-slider-shadowbox"></div>
-        </div>
-        <!-- <div class="section-wrapper social-slider">
+      <!-- <div class="section-wrapper social-slider">
           <img
             onclick="location.href = 'https://www.tiktok.com/@exoticluxuryreviews';"
             class="slider-social-logo"
@@ -482,74 +379,65 @@
           <div class="social-slider-bg"></div>
           <div class="social-slider-shadowbox"></div>
         </div> -->
-      </div>
-    </section>
-
-    <div class="email-contact-section">
-      <h2>Contact Us Directly!</h2>
-      <button onclick="copyToClipboard()" id="textEmail">
-        support@exoticluxuryreviews.com
-      </button>
-      <div class="clipboard-notification">Copied To ClipBoard!</div>
     </div>
+  </section>
 
-    <footer>
-      <div class="footer-left">
-        <img src="./src/img/logos/logo_ELR_wordmark.svg" alt="" />
-        <p>
-          Copyright &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          Exotic Luxury Reviews
-        </p>
-      </div>
-      <div class="footer-right">
-        <div class="footer-nav">
-          <h3 class="footer-text"><p>Help</p></h3>
-          <div class="footer-links">
-            <!-- <a class="footer-text" href="./faq">FAQ</a> -->
-            <a class="footer-text" href="./contact/">Contact Us</a>
-          </div>
-        </div>
-        <div class="footer-nav">
-          <h3 class="footer-text"><p>Legal Info</p></h3>
-          <div class="footer-links">
-            <a class="footer-text" href="./privacy/index.html"
-              >Privacy Policy</a
-            >
-            <a class="footer-text" href="./tos/index.html">Terms of Service</a>
-            <a class="footer-text" href="./cookie-policy/index.html"
-              >Cookie Policy</a
-            >
-          </div>
-        </div>
-        <div class="footer-nav">
-          <h3 class="footer-text"><p>Follow Us</p></h3>
-          <div class="footer-links">
-            <a
-              class="footer-text"
-              href="https://www.tiktok.com/@exoticluxuryreviews"
-              >Tiktok</a
-            >
-            <a
-              class="footer-text"
-              href="https://www.instagram.com/exoticluxuryreviews/"
-              >Instagram</a
-            >
-            <!-- <a class="footer-text" href="">Twitter</a> -->
-            <a
-              class="footer-text"
-              href="https://www.youtube.com/@exoticluxuryreviews/featured"
-              >Youtube</a
-            >
-          </div>
+  <div class="email-contact-section">
+    <h2>Contact Us Directly!</h2>
+    <button onclick="copyToClipboard()" id="textEmail">
+      support@exoticluxuryreviews.com
+    </button>
+    <div class="clipboard-notification">Copied To ClipBoard!</div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <img src="./src/img/logos/logo_ELR_wordmark.svg" alt="" />
+      <p>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Exotic Luxury Reviews
+      </p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-nav">
+        <h3 class="footer-text">
+          <p>Help</p>
+        </h3>
+        <div class="footer-links">
+          <!-- <a class="footer-text" href="./faq">FAQ</a> -->
+          <a class="footer-text" href="./contact/">Contact Us</a>
         </div>
       </div>
-    </footer>
-  </body>
-  <script src="src/main.js?v=4"></script>
-  <script src="src/swipe.js?v=4"></script>
-  <script src="src/update_socials.js?v=4"></script>
-  <script src="src/popup.js?v=4"></script>
+      <div class="footer-nav">
+        <h3 class="footer-text">
+          <p>Legal Info</p>
+        </h3>
+        <div class="footer-links">
+          <a class="footer-text" href="./privacy/index.html">Privacy Policy</a>
+          <a class="footer-text" href="./tos/index.html">Terms of Service</a>
+          <a class="footer-text" href="./cookie-policy/index.html">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h3 class="footer-text">
+          <p>Follow Us</p>
+        </h3>
+        <div class="footer-links">
+          <a class="footer-text" href="https://www.tiktok.com/@exoticluxuryreviews">Tiktok</a>
+          <a class="footer-text" href="https://www.instagram.com/exoticluxuryreviews/">Instagram</a>
+          <!-- <a class="footer-text" href="">Twitter</a> -->
+          <a class="footer-text" href="https://www.youtube.com/@exoticluxuryreviews/featured">Youtube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="src/main.js?v=4"></script>
+<script src="src/swipe.js?v=4"></script>
+<script src="src/update_socials.js?v=4"></script>
+<script src="src/popup.js?v=4"></script>
+
 </html>
