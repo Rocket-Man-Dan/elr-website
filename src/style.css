@@ -1048,6 +1048,7 @@ section {
     overflow-x: hidden;
     padding: 0 0 0rem 0;
     background-color: var(--color-main-dark-body);
+    scroll-margin: 6rem;
 }
 
 .videos > .section-wrapper {
@@ -2256,6 +2257,11 @@ section {
     transform: scale(1);
     filter: drop-shadow(0 0 0.1rem var(--color-main-purple))
         drop-shadow(0 0 0.3rem var(--color-main-purple));
+    cursor: pointer;
+}
+
+.social-btn-container img:hover {
+    transform: scale(1.02);
 }
 
 .email-contact-section {
@@ -2591,6 +2597,7 @@ section {
     width: 100%;
     height: 5rem;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .team-card-handle img {
@@ -2601,11 +2608,12 @@ section {
     font-size: 1.5rem;
     height: 4.75rem;
     padding: 1rem 0;
+    transform: scale(0.9);
 }
 .team-card-handle a:hover,
 .team-card-handle a:active,
 .team-card-handle a:focus {
-    transform: scale(1.1);
+    transform: scale(1);
     color: var(--color-main-orange);
 }
 

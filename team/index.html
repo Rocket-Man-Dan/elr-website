@@ -161,7 +161,13 @@
             alt=""
           />
           <p>Head of Videography and Social Media Strategy</p>
-          <div class="team-card-handle"></div>
+          <div class="team-card-handle">
+            <img
+              src="../src/img/logos/social_media/logo_website_icon.svg"
+              alt=""
+            />
+            <a href="https://withkoji.com/@AustinWarren">@AustinWarren</a>
+          </div>
         </div>
         <div class="team-card">
           <h2>Dan Sessoms</h2>
@@ -212,6 +218,15 @@
             alt=""
           />
           <p>Head of Analytics and PR</p>
+          <div class="team-card-handle">
+            <img
+              src="../src/img/logos/social_media/logo_gmail_icon.svg"
+              alt=""
+            />
+            <a id="beattyEmail" onclick="emailMikeBeatty()"
+              >michael.h.beatty@gmail.com</a
+            >
+          </div>
         </div>
         <div class="team-card">
           <h2>Mr.V</h2>
@@ -272,4 +287,12 @@
     </footer>
   </body>
   <script src="../src/main.js?v=1"></script>
+  <script>
+    function emailMikeBeatty() {
+      /* Copy text into clipboard */
+      const mikeBeattyEmail = document.getElementById("beattyEmail");
+
+      navigator.clipboard.writeText("michael.h.beatty@gmail.com");
+    }
+  </script>
 </html>

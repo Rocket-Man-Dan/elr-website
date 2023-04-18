@@ -15,7 +15,7 @@ window.addEventListener("scroll", function () {
   let checkbox = document.getElementById("mobile-nav");
 
   if (window.pageYOffset > curScrollPos + 2) {
-    nav.classList.add("scroll");
+    // nav.classList.add("scroll");
     isScrolledNav = true;
   }
 
@@ -32,16 +32,16 @@ window.addEventListener("scroll", function () {
   // console.log("window y " + this.scrollY);
 
   if (oldScrollPos + 2 < curScrollPos) {
-    nav.classList.add("scroll");
-    cartBtn.classList.add("scroll");
+    // nav.classList.add("scroll");
+    // cartBtn.classList.add("scroll");
   } else if (oldScrollPos > curScrollPos + 2) {
-    nav.classList.remove("scroll");
-    cartBtn.classList.remove("scroll");
+    // nav.classList.remove("scroll");
+    // cartBtn.classList.remove("scroll");
   }
 
   if (checkbox.checked) {
-    nav.classList.remove("scroll");
-    cartBtn.classList.remove("scroll");
+    // nav.classList.remove("scroll");
+    // cartBtn.classList.remove("scroll");
   }
 });
 
@@ -73,7 +73,15 @@ function expandMenuItems() {
 
 function scrollToVideos() {
   const anchorHome = document.getElementById("videos");
-  anchorHome.scrollIntoView({ behavior: "smooth" });
+  const scrollOffset = -50;
+  const anchorPos = anchorHome.getBoundingClientRect().top;
+  console.log(anchorPos);
+  const offsetPos = anchorPos + scrollOffset;
+
+  window.scrollTo({
+    top: offsetPos,
+    behavior: "smooth",
+  });
 }
 
 // calculation();
