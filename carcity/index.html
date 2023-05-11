@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Approved Now - Carcity Canada</title>
+  <link rel="icon" type="image/x-icon" href="../src/img/icons/favicon_ELR.svg" />
+  <link rel="stylesheet" href="../src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="carcity">
+  <!-- back to top button -->
+  <img class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" src="../img/icon_totop.svg"
+    alt="" />
+  <!-- header -->
+  <header id="header" class="header carcity">
+    <input type="checkbox" id="mobile-nav" style="display: none; position: fixed; z-index: 999" />
+    <div class="nav-wrapper carcity">
+      <!-- logo home button -->
+
+      <div class="carcity-btn-container">
+        <button class="carcity-btn carcity-home-btn"></button>
+      </div>
+      <div class="carcity-btn-container header-center">
+        <a href="">Get Approved</a>
+        <a href="">Sell My Car</a>
+        <div class="why-carcity-btn-hover carcity-header-btn">
+          <a href="">Why Carcity Canada</a>
+          <div class="carcity-why-container">
+            <div>
+              <img src="../src/img/logos/partners/carcity_canada/carcity_icon_checkboxes.png" alt="">
+              <div>
+                <h3>Easy Apply</h3>
+                <p>Fill out a simple form to easily buy or sell a car.</p>
+              </div>
+            </div>
+            <div>
+              <img src="../src/img/logos/partners/carcity_canada/carcity_icon_car.png" alt="">
+              <div>
+                <h3>Extensive Inventory</h3>
+                <p>Get access to a wide selection of cars from all across Canada.</p>
+              </div>
+            </div>
+            <div>
+              <img src="../src/img/logos/partners/carcity_canada/carcity_icon_stars.png" alt="">
+              <div>
+                <h3>Reviews</h3>
+                <p>See how Carcity Canada provides amazing service to its clients.</p>
+              </div>
+            </div>
+            <div class="carcity-hover-spacer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="carcity-btn-container">
+        <button class="carcity-btn get-approved">GET APPROVED</button>
+      </div>
+    </div>
+    <!-- bevel effect for header -->
+  </header>
+  <section class="section-wrapper carcity-hero">
+    <div class="carcity-hero-column">
+      <h2>Easily Buy or Sell Your Car</h2>
+      <h2>Apply Online or over the Phone</h2>
+      <p>
+        Get approved for a new car or sell your's directly to Carcity Canada.
+      </p>
+      <div>
+        <button class="carcity-btn">Apply Now</button>
+        <h4>OR</h4>
+        <button class="carcity-btn">Sell Now</button>
+      </div>
+
+      <p>Or call: <span style="color:#19a6ff ;">613-715-0282</span></p>
+    </div>
+    <div class="carcity-hero-column"></div>
+  </section>
+  <img class="carcity-shape" src="../src/img/shapes/shape_carcity_blue_1.svg" alt="" />
+  <section class="section-wrapper carcity">
+    <div class="carcity-apply-form">
+      <h1>Application Form</h1>
+      <form class="carcity-apply-q1" action="">
+        <h2>Car type</h2>
+        <div>
+          <input type="radio" id="car" name="q1" value="car">
+          <label for="car">car</label>
+          <input type="radio" id="truck" name="q1" value="truck">
+          <label for="truck">truck</label>
+          <input type="radio" id="suv" name="q1" value="suv">
+          <label for="suv">suv</label>
+          <input type="radio" id="minivan" name="q1" value="mininvan">
+          <label for="minivan">minivan</label>
+        </div>
+      </form>
+      <form class="carcity-apply-q2" action="">
+        <h2>Birthday</h2>
+        <div>
+          <input type="number" id="birthday-dd" name="q2" placeholder="dd" maxlength="2" minlength="2">
+          <input type="number" id="birthday-mm" name="q2" placeholder="mm" maxlength="2" minlength="2">
+          <input type="number" id="birthday-yyyy" name="q2" placeholder="yyyy" maxlength="4" minlength="4">
+        </div>
+      </form>
+      <form class="carcity-apply-q1" action="">
+        <h2>Employment status</h2>
+        <div>
+          <input type="radio" id="q3-1" name="q3" value="employed">
+          <label for="q3-1">Employed</label>
+          <input type="radio" id="q3-2" name="q3" value="self employed">
+          <label for="q3-2">Self Employed</label>
+          <input type="radio" id="q3-3" name="q3" value="student">
+          <label for="q3-3">Student</label>
+          <input type="radio" id="q3-4" name="q3" value="other">
+          <label for="q3-4">Other</label>
+        </div>
+      </form>
+      <form class="carcity-apply-q4" action="">
+        <h2>Monthly income</h2>
+        <div id="q4">
+          <input id="income" type="number" name="q4" min="0.00" max="1.00" step="0.05" oninput="onInput(this)"
+            placeholder="0.00" />
+          <p>$</p>
+        </div>
+      </form>
+      <form class="carcity-apply" id="q5" action="">
+        <h2>How long have you been earning this income?</h2>
+        <div>
+          <input type="radio" id="q5-1" name="q5" value="2+">
+          <label for="q5-1">Over 2 years</label>
+          <input type="radio" id="q5-2" name="q5" value="3months-2years">
+          <label for="q5-2">3 months - 2 years</label>
+          <input type="radio" id="q5-3" name="q5" value="lessthan3months">
+          <label for="q5-3">Less than 3 months</label>
+        </div>
+      </form>
+      <form class="carcity-apply" id="q6" action="">
+        <h2>What is your monthly budget for a new vehicle?</h2>
+        <div>
+          <input type="radio" id="q6-1" name="q6" value="2+">
+          <label for="q6-1">Over $500</label>
+          <input type="radio" id="q6-2" name="q6" value="3months-2years">
+          <label for="q6-2">$375 - $500</label>
+          <input type="radio" id="q6-3" name="q6" value="lessthan3months">
+          <label for="q6-3">$250 - $375</label>
+          <input type="radio" id="q6-4" name="q6" value="lessthan3months">
+          <label for="q6-4">under $250</label>
+        </div>
+      </form>
+      <form class="" id="q7" action="">
+        <h2>Employment Position</h2>
+        <div>
+          <input type="text" id="q7-1" placeholder="Employer">
+          <input type="text" id="q7-2" placeholder="Position">
+        </div>
+      </form>
+      <form class="" id="q8" action="">
+        <h2>What is your home address?</h2>
+        <div>
+          <input type="text" id="q7-1" placeholder="Enter home address">
+        </div>
+      </form>
+      <form class="carcity-apply" id="q9" action="">
+        <h2>How long have you been living at this address?</h2>
+        <div>
+          <input type="radio" id="q9-1" name="q9" value="2+">
+          <label for="q9-1">Over 2 years</label>
+          <input type="radio" id="q9-2" name="q9" value="3months-2years">
+          <label for="q9-2">Less than 2 years</label>
+        </div>
+      </form>
+      <form class="" id="q10" action="">
+        <h2>What is your email address?</h2>
+        <div>
+          <input type="text" id="q10-1" placeholder="example@example.com">
+        </div>
+      </form>
+      <form class="" id="q11" action="">
+        <h2>What is your phone number?</h2>
+        <div>
+          <input type="text" id="q11-1" placeholder="(555)-555-5555">
+        </div>
+      </form>
+
+    </div>
+    <div class="carcity-apply-submit">
+      <button class="carcity-submit-btn">SUBMIT</button>
+    </div>
+
+
+  </section>
+  <footer class="carcity">
+    <div class="footer-left">
+      <img src="../src/img/logos/logo_ELR_wordmark.svg" alt="" />
+      <p>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Exotic Luxury Reviews
+      </p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-nav">
+        <h3 class="footer-text">Help</h3>
+        <div class="footer-links">
+          <a class="footer-text" href="../about">About Us</a>
+          <a class="footer-text" href="../faq">FAQ</a>
+          <a class="footer-text" href="../contact/">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h3 class="footer-text">Legal Info</h3>
+        <div class="footer-links">
+          <a class="footer-text" href="../privacy">Privacy Policy</a>
+          <a class="footer-text" href="../tos">Terms of Service</a>
+          <a class="footer-text" href="../cookies">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h3 class="footer-text">Follow Us</h3>
+        <div class="footer-links">
+          <a class="footer-text" href="">Facebook</a>
+          <a class="footer-text" href="https://www.instagram.com/exoticluxuryreviews/">Instagram</a>
+          <a class="footer-text" href="">Twitter</a>
+          <a class="footer-text" href="">Youtube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../src/main.js?v=1"></script>
+<script src="../src/leadGen.js"></script>
+
+</html>
