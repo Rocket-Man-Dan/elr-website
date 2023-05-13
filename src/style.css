@@ -3830,7 +3830,7 @@ body.carcity,
 
 .section-wrapper.carcity {
     width: 100%;
-    height: 150rem;
+    height: 180rem;
     margin: 0 0 0 0;
     padding: 0;
     background-color: #19a6ff;
@@ -3864,10 +3864,10 @@ html {
     align-items: center;
     justify-content: top;
     flex-direction: column;
-    margin: -30rem 0 0 0;
+    margin: -10rem 0 0 0;
     padding: 2rem 0 0 0;
     width: 60%;
-    height: 130rem;
+    height: 142rem;
     border-radius: 2rem;
     background-color: #53bcff;
     transform: scale(0.7);
@@ -3960,6 +3960,30 @@ html {
     text-indent: 2rem;
 }
 
+#q12 div input {
+    display: none;
+}
+#q12 div label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: 1rem;
+    height: 4rem;
+    color: var(--color-main-dark-50);
+    font-size: 2.25rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#q12 div label:focus {
+    border: none !important;
+    outline: 0.2rem solid #19a6ff;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
 .carcity-apply {
     display: flex;
     align-items: center;
@@ -4047,7 +4071,8 @@ input:not(:placeholder-shown) {
 }
 
 .carcity-apply-q1 input:checked + label,
-.carcity-apply input:checked + label {
+.carcity-apply input:checked + label,
+#q12 input:checked + label {
     outline: 0.25rem solid white;
     outline: 0.3rem solid hsla(203, 100%, 55%, 0.5);
     color: white;
@@ -4248,7 +4273,7 @@ input:not(:placeholder-shown) {
     #applicationForm {
         margin-top: 5rem;
         width: 48rem;
-        height: 175rem;
+        height: 192rem;
     }
 
     .carcity-apply-q1 div {
