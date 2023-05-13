@@ -24,14 +24,14 @@
     <div class="nav-wrapper carcity">
       <!-- logo home button -->
 
-      <div class="carcity-btn-container">
+      <div class="carcity-btn-container home">
         <button class="carcity-btn carcity-home-btn"></button>
       </div>
-      <div class="carcity-btn-container header-center">
-        <a href="">Get Approved</a>
-        <a href="">Sell My Car</a>
+      <div class="carcity-btn-container header-center ">
+        <a href="" class="desktop-hidden">Get Approved</a>
+        <a href="" class="desktop-hidden">Sell My Car</a>
         <div class="why-carcity-btn-hover carcity-header-btn">
-          <a href="">Why Carcity Canada</a>
+          <a href="" class="desktop-hidden">Why Carcity Canada</a>
           <div class="carcity-why-container">
             <div>
               <img src="../src/img/logos/partners/carcity_canada/carcity_icon_checkboxes.png" alt="">
@@ -59,7 +59,14 @@
         </div>
       </div>
       <div class="carcity-btn-container">
-        <button class="carcity-btn get-approved">GET APPROVED</button>
+        <input type="checkbox" id="carcityMobileMenu" style="display: none;">
+        <label class="carcity-mobile-menu" for="carcityMobileMenu"></label>
+        <button class="carcity-btn get-approved desktop-hidden">GET APPROVED</button>
+        <div class="carcity-mobile-nav-menu">
+          <a href="">Get Approved</a>
+          <a href="">Sell My Car</a>
+          <a href="">Why Carcity</a>
+        </div>
       </div>
     </div>
     <!-- bevel effect for header -->
@@ -81,9 +88,10 @@
     </div>
     <div class="carcity-hero-column"></div>
   </section>
+  <a href="#applicationForm" class="carcity-btn">Get Started</a>
   <img class="carcity-shape" src="../src/img/shapes/shape_carcity_blue_1.svg" alt="" />
   <section class="section-wrapper carcity">
-    <div class="carcity-apply-form">
+    <div class="carcity-apply-form" id="applicationForm">
       <h1>Application Form</h1>
       <form class="carcity-apply-q1" action="">
         <h2>Car type</h2>
@@ -161,7 +169,7 @@
       <form class="" id="q8" action="">
         <h2>What is your home address?</h2>
         <div>
-          <input type="text" id="q7-1" placeholder="Enter home address">
+          <input type="text" id="q8-1" placeholder="Enter home address">
         </div>
       </form>
       <form class="carcity-apply" id="q9" action="">
@@ -185,11 +193,11 @@
           <input type="text" id="q11-1" placeholder="(555)-555-5555">
         </div>
       </form>
+      <div class="carcity-apply-submit">
+        <button class="carcity-submit-btn">SUBMIT</button>
+      </div>
+    </div>
 
-    </div>
-    <div class="carcity-apply-submit">
-      <button class="carcity-submit-btn">SUBMIT</button>
-    </div>
 
 
   </section>

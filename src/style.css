@@ -3730,7 +3730,7 @@ body.carcity,
     background-color: #00000000;
     background-image: url(../src/img/logos/partners/logo_carcity_canada_black.png);
     background-repeat: no-repeat;
-    background-size: 14rem;
+    background-size: 80%;
     background-position: center;
     height: 8rem;
     width: 14rem;
@@ -3741,6 +3741,17 @@ body.carcity,
     transform: scale(1.1);
     background-image: url(../src/img/logos/partners/logo_carcity_canada.png);
     filter: drop-shadow(0rem 0rem 0.15rem black);
+}
+
+.get-approved {
+    width: 14rem;
+    position: absolute;
+}
+
+.carcity-mobile-menu,
+#carcityMobileMenu,
+.carcity-mobile-nav-menu {
+    display: none;
 }
 
 .section-wrapper.carcity-hero {
@@ -3820,9 +3831,32 @@ body.carcity,
 .section-wrapper.carcity {
     width: 100%;
     height: 150rem;
-    margin: 0;
+    margin: 0 0 0 0;
     padding: 0;
     background-color: #19a6ff;
+}
+
+.section-wrapper.carcity-hero + a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32rem;
+    height: 6rem;
+    left: 0;
+    right: 0;
+    margin: 20rem auto 0 auto;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#applicationForm {
+    scroll-margin: 1rem;
 }
 
 .carcity-apply-form {
@@ -3830,11 +3864,13 @@ body.carcity,
     align-items: center;
     justify-content: top;
     flex-direction: column;
+    margin: -30rem 0 0 0;
     padding: 2rem 0 0 0;
     width: 60%;
     height: 130rem;
     border-radius: 2rem;
     background-color: #53bcff;
+    transform: scale(0.7);
 }
 
 .carcity-apply-form h1 {
@@ -3845,15 +3881,16 @@ body.carcity,
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30rem;
-    height: 10rem;
+    width: 23rem;
+    height: 12rem;
     border-radius: 0 0 2rem 2rem;
     background-color: #53bcff;
 }
 
 .carcity-submit-btn {
+    margin: 1rem 0;
     width: 20rem;
-    height: 5rem;
+    height: 6rem;
     border-radius: 2rem;
     border: none;
     color: var(--color-main-dark-50);
@@ -4024,6 +4061,280 @@ input:not(:placeholder-shown) {
 .carcity-apply-q1 input,
 .carcity-apply input {
     display: none;
+}
+
+@media (max-aspect-ratio: 4/3) {
+    .desktop-hidden {
+        display: none;
+    }
+
+    header.carcity {
+        width: 100%;
+    }
+
+    .nav-wrapper.carcity {
+        width: 100%;
+        margin: 0;
+    }
+
+    .carcity-btn-container.home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100vw;
+        transform: unset;
+        transform: translateY(0.5rem);
+    }
+    .carcity-home-btn {
+        background-size: 100%;
+    }
+
+    @keyframes flipMobileMenu {
+        from {
+            transform: scaleX(0.8) scaleY(0.8);
+        }
+        to {
+            transform: scaleX(-0.8) scaleY(0.8);
+        }
+    }
+
+    @keyframes flipMobileMenuBack {
+        from {
+            transform: scaleX(-0.8) scaleY(0.8);
+        }
+        to {
+            transform: scaleX(0.8) scaleY(0.8);
+        }
+    }
+
+    .carcity-mobile-menu {
+        z-index: 21;
+        display: flex;
+        position: fixed;
+        width: 8rem;
+        height: 8rem;
+        background-image: url(../src/img/logos/partners/carcity_canada/icon_mobile_menu_blue.svg);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border-radius: 1rem;
+        background-color: white;
+        border: none;
+        transform: scale(0.8);
+    }
+
+    .carcity-mobile-menu:focus {
+        /* transform: scale(0.9); */
+        background-color: #00000000;
+    }
+
+    #carcityMobileMenu:not(:checked) ~ .carcity-mobile-menu {
+        animation: flipMobileMenuBack 300ms ease-in-out 1;
+        transform: scale(0.8);
+    }
+
+    #carcityMobileMenu:checked ~ .carcity-mobile-menu {
+        animation: flipMobileMenu 300ms ease-in-out 1;
+        transform: scale(0.8);
+        background-color: #00000000;
+        background-image: url(../src/img/nav_icons/icon_mobile_menu_white.svg);
+    }
+
+    .carcity-mobile-nav-menu {
+        transition: all ease-in-out 500ms;
+        display: flex;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+        z-index: 20;
+        position: fixed;
+        padding: 8rem 0 0 0;
+        top: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: #19a6ff;
+        transform: translateX(100vw);
+        outline: 0.2rem solid white;
+    }
+
+    .carcity-mobile-nav-menu a {
+        margin: 2rem 0;
+        width: 90%;
+        font-size: 1.75rem;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+        border-radius: 1rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: var(--color-main-dark-alt);
+    }
+
+    #carcityMobileMenu:checked ~ .carcity-mobile-nav-menu {
+        transform: translateX(0vw);
+    }
+
+    .carcity-why-container {
+        display: none;
+    }
+
+    .section-wrapper.carcity-hero {
+        margin: 6rem 0 0 0;
+        padding: 0;
+        width: 100%;
+        height: 40rem;
+        flex-direction: column;
+    }
+
+    .carcity-hero-column {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .carcity-hero-column:last-child {
+        z-index: 5;
+        width: 100%;
+        background-size: 32rem;
+
+        background-position: center;
+        transform: scale(1) translate(0, 3rem) !important;
+    }
+
+    .carcity-hero-column h2:first-of-type {
+        text-align: center;
+        margin: 0 !important;
+        font-size: 2.5rem !important;
+    }
+    .carcity-hero-column h2 {
+        text-align: center;
+        margin: 0 !important;
+        font-size: 2rem !important;
+    }
+    .carcity-hero-column p {
+        text-align: center;
+        margin: 1rem 0 !important;
+        font-size: 1.5rem !important;
+    }
+
+    .carcity-hero-column div button {
+        font-size: 1.8rem !important;
+        width: 14rem !important;
+        height: 5rem !important;
+    }
+    .carcity-hero-column div h4 {
+        margin: 0 1rem !important;
+    }
+
+    .carcity-hero-column div {
+        justify-content: center;
+    }
+
+    .section-wrapper.carcity-hero + a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 32rem;
+        height: 6rem;
+        left: 0;
+        right: 0;
+        margin: 8rem auto 0 auto;
+        font-size: 2rem;
+        text-decoration: none;
+        padding: 1rem 2rem;
+    }
+
+    #applicationForm {
+        margin-top: 5rem;
+        width: 48rem;
+        height: 175rem;
+    }
+
+    .carcity-apply-q1 div {
+        height: 12rem !important;
+
+        flex-wrap: wrap;
+    }
+
+    .carcity-apply-q1 label {
+        width: 100%;
+        height: 5rem;
+        flex-basis: 45%;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #181818ba;
+    }
+
+    .carcity-apply-form form div input {
+        flex-basis: unset;
+    }
+
+    .carcity-apply-q2 div input {
+        width: 50%;
+        flex-basis: unset;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 0 1rem;
+        color: #181818ba;
+    }
+
+    .carcity-apply-q2 div input:nth-child(3) {
+        flex-basis: unset;
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form h2 {
+        margin-bottom: -4.5rem;
+        text-align: left;
+        width: 100%;
+        position: relative !important;
+    }
+
+    form div {
+        margin: 0 0 !important;
+    }
+
+    .carcity-apply-form form div input {
+        flex-basis: 100%;
+    }
+
+    #q4 input {
+        width: 100% !important;
+        flex-basis: 100%;
+    }
+
+    #q5 div,
+    #q6 div {
+        height: 10rem;
+        flex-wrap: wrap;
+    }
+
+    #q5 label,
+    #q6 label {
+        flex-basis: 45%;
+    }
+
+    #q7 div {
+        height: 12rem;
+        flex-direction: column;
+    }
+
+    #q7 input {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    #q8 input,
+    #q10 input,
+    #q11 input {
+        width: 100%;
+        margin: 0 !important;
+    }
 }
 
 footer.carcity {
